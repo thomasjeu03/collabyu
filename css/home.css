@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "Gotham Black";
+    src: url("../font/GothamBold.ttf") format("truetype");
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../font/GothamBook.ttf") format("truetype");
+    font-style: normal;
+}
+::-webkit-scrollbar{
+    width: 8px;
+    height: 0;
+    background-color: #1A2537;
+    transition: 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(242,242,242, 0.9);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(242,242,242, 0.7);
+    transition: 0.3s ease-in-out;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    display: flex;
+    color: #F2F2F2;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #1A2537;
+}
+header{
+    width: calc((100% - 577px) / 2);
+    height: 100vh;
+    display: flex;
+    transform: translateX(-73px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.nav{
+    position: relative;
+    width: 274px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 356px;
+    padding: 34px 54px;
+    border: #009380 1px solid;
+    border-radius: 42px 0 42px 42px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+                6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+h1{
+    display: none;
+}
+h2{
+    font-family: "Gotham";
+    font-size: 20px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    line-height: 20px;
+    height: 67px;
+    width: calc(100% - 60px);
+    padding: 26px 0;
+    background: linear-gradient(#1A2537FF 75%, #1A253700);
+}
+a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+.nav a:nth-of-type(5) img{
+    border-radius: 50%;
+    border: #EC1D53 1px solid;
+    outline: none;
+}
+.nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    font-family: "Gotham";
+    transition: 0.3s ease-in-out;
+}
+.nav a:hover{
+    color: #EC1D53;
+    font-weight: 600;
+}
+.nav a p{
+    position: absolute;
+    left: 46px;
+}
+
+
+main{
+    width: 577px;
+    height: 200vh;
+    padding: 0 30px 60px 30px;
+    transform: translateX(-73px);
+    position: relative;
+    border-left: #009380 solid 1px;
+    border-right: #009380 solid 1px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+    6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+.cardProfil{
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    z-index: 5;
+    border-radius: 42px;
+    border: #F2F2F2 solid 1px;
+}
+.cardProfil .left img{
+    border: #F2F2F2 1px solid;
+    border-radius: 50%;
+}
+.cardProfil .left{
+    width: 60%;
+    padding: 22px;
+    border-right: #F2F2F2 solid 1px;
+}
+.cardProfil .left>*{
+    margin-bottom: 10px;
+}
+.musicalGenre{
+    margin-bottom: 0;
+}
+.cardProfil .left .id {
+    display: flex;
+    height: 60px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.cardIdRight{
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cardProfil .left .id a:first-of-type{
+    width: 60px;
+    height: 60px;
+}
+.localisation p{
+    margin-left: 7px;
+}
+.localisation, .instrumentListe, .musicalGenreListe{
+    display: flex;
+    flex-flow: wrap row;
+}
+
+
+
+aside{
+    width: calc((100% - 577px) / 2);
+    height: 100vh;
+    transform: translateX(-73px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.searchAside{
+    position: relative;
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 580px;
+    padding: 0 24px;
+    border: #009380 1px solid;
+    border-radius: 0 42px 42px 42px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+    6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+
+
+
+.loader{
+    z-index: 60;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#1A2537, #1A2547);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoloader{
+    transform: translateY(350px) rotate(180deg);
+    animation: gravity 2.6s ease infinite;
+}
+@keyframes gravity {
+    0% {
+        transform: translateY(-350px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(350px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-350px) rotate(0deg);
+    }
+}
+.vert{
+    opacity: 0;
+    animation: vert 1.3s ease infinite;
+}
+.rose{
+    opacity: 0;
+    animation: vert 1.3s ease infinite;
+}
+@keyframes vert {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.disparition{
+    opacity: 0;
+    z-index: -50;
+    transition: opacity 1s ease-out;
+}

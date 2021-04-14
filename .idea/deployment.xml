@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="CollabyU" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="CollabyU">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/sites/collabyu.thomasjeu.fr" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

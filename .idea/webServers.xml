@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dc752fe0-8989-46e4-b9e9-18ea8e8cd63e" name="CollabyU">
+        <fileTransfer rootFolder="/home/clients/8b012fd150b7a966cbf7617d77f1d9f6" accessType="SFTP" host="tj9r5.ftp.infomaniak.com" port="22" sshConfigId="ec7d7046-2ae9-4386-aa01-58c8fb669e3d" sshConfig="tj9r5_thomastermind@tj9r5.ftp.infomaniak.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

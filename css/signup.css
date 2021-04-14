@@ -185,9 +185,18 @@ h1{
     line-height: 50px;
     transform: translateX(22px);
 }
-form{
+.card>form{
     margin-top: 50px;
     height: 450px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.carddeux>form{
+    margin-top: 30px;
+    height: 409px;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -284,6 +293,19 @@ a>p{
     width: 42%;
     height: auto;
 }
+textarea{
+    margin-left: 15px;
+    border: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    width: 242px;
+    height: 105px;
+    background-color: #1A2537;
+    color: #F2F2F2;
+    opacity: 1;
+    outline: none;
+}
 .checkbox{
     width: 44%;
     transform: translateX(7px);
@@ -330,7 +352,7 @@ a>p{
 a{
     transition: 0.4s ease-in-out;
 }
-a:hover{
+.card a:hover{
     border-bottom: 1px solid #009380;
 }
 p{
@@ -338,9 +360,77 @@ p{
     font-family: Roboto;
     text-align: right;
 }
+.inputbio{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+}
+.bio{
+    height: 120px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.back{
+    display: flex;
+    align-items: center;
+    margin-top: 44px;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 42%;
+    height: auto;
+    cursor: pointer;
+}
+.back p{
+    font-size: 14px;
+    color: #009380;
+}
+.back >*{
+    margin-right: 10px;
+}
+.arrow{
+    transition: 0.4s ease-in-out;
+}
+.back:hover .arrow{
+    transform: translateX(-5px);
+}
+.carddeux{
+    width: 815px;
+    height: 654px;
+    position: absolute;
+    top: 50%;
+    right: 250px;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 55px 60px;
+    background-color: #1A2537;
+    border: solid 1px #009380;
+    border-radius: 0 50px 50px 50px;
+    box-shadow: -6px -3px 30px rgba(255, 255, 255, 0.05),
+    6px 3px 30px rgba(0, 0, 0, 0.37);
+}
+.formspon{
+    display: none;
+}
 
 @media only screen and (max-width: 1400px){
     .card{
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+        top: 50%;
+        right: 0;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    .carddeux{
         position: absolute;
         margin-right: auto;
         margin-left: auto;

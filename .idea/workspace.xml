@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="test2">
+      <change afterPath="$PROJECT_DIR$/class/class.Collaboration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/class.ExternLink.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/class.Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/class.MusicalGenre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/class.User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/PP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo collabyU.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/ReCaptcha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Curl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/CurlPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Socket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/SocketPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestParameters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recaptcha/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/accueil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/chat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/neural.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/resume.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qIvoPWAzuDOtARg7hdNXyCvFTk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ChangesTree.GroupingKeys" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Documents/Etudes/Université/MMI 1er année/Intégration web/css_grid_exo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="" />
+      <created>1616780093284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616780093284</updated>
+      <workItem from="1616780094554" duration="448000" />
+      <workItem from="1616829015657" duration="1236000" />
+      <workItem from="1616830299401" duration="73000" />
+      <workItem from="1616830493923" duration="10338000" />
+      <workItem from="1616844772090" duration="10872000" />
+      <workItem from="1616867718851" duration="12000" />
+      <workItem from="1617002758634" duration="739000" />
+      <workItem from="1617003555688" duration="2059000" />
+      <workItem from="1617028104921" duration="1202000" />
+      <workItem from="1617040307351" duration="9168000" />
+      <workItem from="1617086167819" duration="604000" />
+      <workItem from="1617088223157" duration="1895000" />
+      <workItem from="1617106919076" duration="2052000" />
+      <workItem from="1617117456130" duration="665000" />
+      <workItem from="1617123154029" duration="12316000" />
+      <workItem from="1617201371293" duration="4000" />
+      <workItem from="1617201421738" duration="80000" />
+      <workItem from="1617430895346" duration="2007000" />
+      <workItem from="1617440041618" duration="2164000" />
+      <workItem from="1617455157907" duration="3766000" />
+      <workItem from="1617526454694" duration="69000" />
+      <workItem from="1617572897783" duration="43000" />
+      <workItem from="1617730022787" duration="7000" />
+      <workItem from="1617730258532" duration="597000" />
+      <workItem from="1617902784618" duration="10000" />
+      <workItem from="1617903272974" duration="3000" />
+      <workItem from="1617948514713" duration="6000" />
+      <workItem from="1617958498625" duration="3651000" />
+      <workItem from="1617976268758" duration="7028000" />
+      <workItem from="1618034873822" duration="12002000" />
+      <workItem from="1618050979519" duration="417000" />
+      <workItem from="1618076314465" duration="2432000" />
+      <workItem from="1618151796410" duration="3963000" />
+      <workItem from="1618163709739" duration="1425000" />
+      <workItem from="1618172236643" duration="3361000" />
+      <workItem from="1618232897644" duration="1095000" />
+      <workItem from="1618258735180" duration="7000" />
+      <workItem from="1618259008053" duration="62000" />
+      <workItem from="1618259073187" duration="3000" />
+      <workItem from="1618424872496" duration="6268000" />
+    </task>
+    <task id="LOCAL-00001" summary="landing page">
+      <created>1616855832322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616855832322</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test1">
+      <created>1617002824193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617002824193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test2">
+      <created>1617003322296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617003322296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="landing page" />
+    <MESSAGE value="test1" />
+    <MESSAGE value="test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="170" key="#SSH_Configurations" timestamp="1616780402877">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="536" y="170" key="#SSH_Configurations/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616780402877" />
+    <state x="760" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1618043896594">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="760" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1618043896594" />
+    <state x="740" y="267" key="FileChooserDialogImpl" timestamp="1617091519299">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1617091519299" />
+    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618175139913">
+      <screen x="-1080" y="-833" width="1080" height="1890" />
+    </state>
+    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618175139913" />
+    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471267668" />
+    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1618044721951" />
+    <state x="461" y="170" width="1242" height="709" key="SettingsEditor" timestamp="1617091528328">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" width="1242" height="709" key="SettingsEditor/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617044034488" />
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1617091528328" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1618433923739">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1080.-833.1080.1890@0.0.1920.1050" timestamp="1618433923739" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856074625" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1617003648864" />
+    <state x="1100" y="0" width="745" height="1030" key="dock-window-1" timestamp="1617958695163">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="953" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471348863" />
+    <state x="1100" y="0" width="745" height="1030" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1617958695163" />
+    <state x="953" y="0" width="974" height="1057" key="dock-window-2" timestamp="1616856546378">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="953" y="0" width="974" height="1057" key="dock-window-2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856546378" />
+    <state x="961" y="255" key="ftp.server.browser" timestamp="1616780436943">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="961" y="255" key="ftp.server.browser/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616780436943" />
+    <state x="838" y="399" width="631" height="507" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1617091527184">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="838" y="399" width="631" height="507" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617091527184" />
+    <state x="2" y="247" key="run.anything.popup" timestamp="1618047512777">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2" y="247" key="run.anything.popup/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617979341102" />
+    <state x="2" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1618047512777" />
+  </component>
+</project>

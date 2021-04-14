@@ -435,7 +435,7 @@
         </a>
         <div class="card">
             <h1>Se connecter</h1>
-            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <form action="home.php" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="field input inputun">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23.9" height="27.961" viewBox="0 0 23.9 27.961">
                         <g id="icon_profil" data-name="icon profil" transform="translate(0.531)">
