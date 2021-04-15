@@ -5,7 +5,61 @@ if(isset($_POST['submit'])) {
         $recaptcha = new \ReCaptcha\ReCaptcha('6LfOP5QaAAAAACrDMq8b25Ca0Trxx7iVY7mmbcP-');
         $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
     }
-} ?>
+}
+
+$bdd = new PDO (
+    'mysql:host=127.0.0.1;dbname=collabyu;charset=utf8',
+    'root',
+    'root');
+
+if (isset($_POST['submit'])) {
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = sha1($_POST['password']);
+    $password2 = sha1($_POST['password2']);
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $age = htmlspecialchars($_POST['age']);
+
+    if(!empty($_POST['username']) AND !empty($_POST['email']) AND !empty($_POST['password']) AND !empty($_POST['password2']) AND !empty($_POST['pseudo']) AND !empty($_POST['age']) AND !empty($_POST['interest'])){
+        $usernamelenght = strlen($username);
+        if($usernamelenght <= 25) {
+            $requsername = $bdd->prepare("SELECT * FROM users WHERE user_username_USERS = ?");
+            $requsername->execute(array($username));
+            $usernameexist = $requsername->rowCount();
+            if($usernameexist == 0){
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    $reqmail = $bdd->prepare("SELECT * FROM users WHERE user_mail_USERS = ?");
+                    $reqmail->execute(array($email));
+                    $mailexist = $reqmail->rowCount();
+                    if($mailexist == 0){
+                        if ($password == $password2) {
+                            $insertuser = $bdd->prepare("INSERT INTO users(user_username_USERS,user_mail_USERS,user_password_USERS,user_name_USERS,user_age_USERS) VALUES(?,?,?,?,?)");
+                            $insertuser->execute(array($username, $email, $password2, $pseudo, $age));
+                            $_SESSION['comptecree'] = "Votre compte a bien été créé !";
+                            header('Location: home.php');
+                        } else {
+                            $erreurpassword = "Votre mot de passe n'a pas été confirmé";
+                        }
+                    }else{
+                        $erreurmail = "Adresse mail déjà utilisée";
+                    }
+                }else{
+                    $erreurmailcorrect = "Adresse mail pas correct";
+                }
+            }else{
+                $erreurusername = "Nom d'utilisateur déjà utilisé";
+            }
+        }else{
+            $erreurusernamenb = "Votre pseudo ne doit pas faire plus de 25 caractères.";
+        }
+    }else{
+        $erreur = "";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,15 +83,6 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-<div class="loader">
-    <svg class="logoloader" xmlns="http://www.w3.org/2000/svg" width="106" height="109" viewBox="0 0 106 109">
-        <g id="logo_svg" data-name="logo svg" transform="translate(-246 -597)">
-            <path class="vert" id="vert" d="M17,0H35A17,17,0,0,1,52,17v0A17,17,0,0,1,35,34H0a0,0,0,0,1,0,0V17A17,17,0,0,1,17,0Z" transform="translate(300 597)" fill="#009380"/>
-            <path class="rose" id="rose" d="M21,0H63a0,0,0,0,1,0,0V21A21,21,0,0,1,42,42H21A21,21,0,0,1,0,21v0A21,21,0,0,1,21,0Z" transform="translate(246 664)" fill="#ec1d53"/>
-            <path id="blanc" d="M3,0H9A0,0,0,0,1,9,0V22a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V3A3,3,0,0,1,3,0Z" transform="translate(300 635)" fill="#f2f2f2"/>
-        </g>
-    </svg>
-</div>
 
 <header>
     <div class="gauche">
@@ -443,7 +488,7 @@ if(isset($_POST['submit'])) {
         </a>
         <div class="card">
             <h1>S'inscrire</h1>
-            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="field input inputun">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23.9" height="27.961" viewBox="0 0 23.9 27.961">
                         <g id="icon_profil" data-name="icon profil" transform="translate(0.531)">
@@ -454,17 +499,40 @@ if(isset($_POST['submit'])) {
                             <path id="Tracé_123" data-name="Tracé 123" d="M4786.133,458.461H4808.9s1.23-10.4-11.445-10.4S4786.133,458.461,4786.133,458.461Z" transform="translate(-4786.091 -431)" fill="none" stroke="#f2f2f2" stroke-width="1"/>
                         </g>
                     </svg>
-                    <input type="text" name="username" placeholder="Nom d'utilisateur" autofocus required>
+                    <input type="text" name="username" placeholder="Nom d'utilisateur" value="<?php if (isset($username)) {echo $username;}?>" autofocus required>
                 </div>
-                <div class="error-text">Nom d'utilisateur déjà utilisé</div>
+                <?php
+                if(!empty($erreurusername)){
+                    ?>
+                    <div class="error-text"><?=$erreurusername?></div>
+                <?php }
+                ?>
+                <?php
+                if(!empty($erreurusernamenb)){
+                    ?>
+                    <div class="error-text"><?=$erreurusernamenb?></div>
+                <?php }
+                ?>
                 <div class="field input inputun">
                     <svg id="mail" xmlns="http://www.w3.org/2000/svg" width="23.64" height="16.622" viewBox="0 0 23.64 16.622">
                         <g id="Groupe_801" data-name="Groupe 801">
                             <path id="Tracé_130" data-name="Tracé 130" d="M21.562,76H2.078A2.081,2.081,0,0,0,0,78.078V90.544a2.081,2.081,0,0,0,2.078,2.078H21.562a2.08,2.08,0,0,0,2.078-2.078V78.078A2.08,2.08,0,0,0,21.562,76Zm-.291,1.385-7.982,7.94a2.078,2.078,0,0,1-2.94,0L2.369,77.385ZM1.385,90.262v-11.9l5.986,5.954Zm.984.974,5.983-5.945L9.371,86.3a3.463,3.463,0,0,0,4.9,0l1.02-1.014,5.983,5.945Zm19.885-.974-5.986-5.948,5.986-5.954Z" transform="translate(0 -76)" fill="#f2f2f2"/>
                         </g>
                     </svg>
-                    <input type="email" name="email" placeholder="Adresse mail" required>
+                    <input type="email" name="email" value="<?php if (isset($email)) {echo $email;}?>" placeholder="Adresse mail" required>
                 </div>
+                <?php
+                if(!empty($erreurmailcorrect)){
+                    ?>
+                    <div class="error-text"><?=$erreurmailcorrect?></div>
+                <?php }
+                ?>
+                <?php
+                if(!empty($erreurmail)){
+                    ?>
+                    <div class="error-text"><?=$erreurmail?></div>
+                <?php }
+                ?>
                 <div class="field input inputdeux inputun">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21.082" height="27.074" viewBox="0 0 21.082 27.074">
                         <g id="icon_cadena" data-name="icon cadena" transform="translate(0 0.5)">
@@ -501,10 +569,16 @@ if(isset($_POST['submit'])) {
                             <path id="Tracé_127" data-name="Tracé 127" d="M3.049,0a3.169,3.169,0,0,0,.4,3.052A2.139,2.139,0,0,0,.71,4.237s0,0-.185.2C.89,3.642.913,1.947,0,1.4,1.054,1.821,3.049,0,3.049,0Z" transform="translate(25.103 10.895) rotate(8)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
                         </g>
                     </svg>
-                    <input type="password" name="password" placeholder="Comfirmer le mot de passe" required>
+                    <input type="password" name="password2" placeholder="Comfirmer le mot de passe" required>
                     <i class="fas fa-eye"></i>
                 </div>
-                <div class="error-text">Votre mot de passe n'a pas été confirmé</div>
+                <?php
+                    if(!empty($erreurpassword)){
+                        ?>
+                        <div class="error-text"><?=$erreurpassword?></div>
+                    <?php }
+                    ?>
+
                 <div class="field input">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31.719" height="27.961" viewBox="0 0 31.719 27.961">
                         <g id="icon_profil" data-name="icon profil" transform="translate(0.531)">
@@ -516,118 +590,16 @@ if(isset($_POST['submit'])) {
                             <path id="Tracé_151" data-name="Tracé 151" d="M2.641,9.807,0,15.088l5.564-1.132L20.086,4.243,16.974,0Z" transform="translate(7.623 10.539) rotate(-13)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
                         </g>
                     </svg>
-                    <input type="text" name="pseudo" placeholder="Pseudonyme" required>
+                    <input type="text" name="pseudo" value="<?php if (isset($pseudo)) {echo $pseudo;}?>" placeholder="Pseudonyme" required>
                 </div>
-                <div class="select">
+                <div class="field input">
                     <svg id="birthday-cake" xmlns="http://www.w3.org/2000/svg" width="25.071" height="25.478" viewBox="0 0 25.071 25.478">
                         <path id="Tracé_147" data-name="Tracé 147" d="M25.463,139.071V135.31a2.091,2.091,0,0,0-2.089-2.089H21.7v-4.179a.418.418,0,0,0-.418-.418H18.778a.418.418,0,0,0-.418.418v4.179H14.6v-5.014a.418.418,0,0,0-.418-.418H11.674a.418.418,0,0,0-.418.418v5.014H7.5v-4.179a.418.418,0,0,0-.418-.418H4.571a.418.418,0,0,0-.418.418v4.179H2.482A2.092,2.092,0,0,0,.392,135.31v3.761a2.424,2.424,0,0,0,1.254,2.161v4.525H.81a.418.418,0,0,0,0,.836H25.046a.418.418,0,0,0,0-.836H24.21v-4.518A2.515,2.515,0,0,0,25.463,139.071ZM19.2,129.46h1.671v3.761H19.2Zm-7.1-.836h1.671v4.6H12.092Zm-7.1.836H6.66v3.761H4.989Zm-3.761,5.85a1.253,1.253,0,0,1,1.254-1.254H23.374a1.253,1.253,0,0,1,1.254,1.254v3.761a1.682,1.682,0,0,1-1,1.533,1.709,1.709,0,0,1-1.853-.348,1.678,1.678,0,0,1-.489-1.185V137.4a1.667,1.667,0,0,0-.925-1.488l-.026-.014a1.6,1.6,0,0,0-.206-.081c-.042-.014-.08-.028-.121-.038a1.611,1.611,0,0,0-.162-.029c-.037-.005-.072-.016-.109-.019-.02,0-.039,0-.059,0s-.041-.006-.063-.006c-.046,0-.091.01-.137.013s-.095.006-.142.014a1.672,1.672,0,0,0-.213.055c-.038.012-.076.02-.113.034a1.6,1.6,0,0,0-.225.113c-.026.015-.054.026-.08.042a1.68,1.68,0,0,0-.271.219,1.66,1.66,0,0,0-.49,1.182v.836a1.671,1.671,0,1,1-3.343,0V137.4a1.667,1.667,0,0,0-.925-1.488l-.026-.014a1.6,1.6,0,0,0-.206-.081c-.042-.014-.08-.028-.121-.038a1.611,1.611,0,0,0-.162-.029c-.037-.005-.072-.016-.109-.019-.02,0-.039,0-.059,0s-.041-.006-.063-.006c-.046,0-.091.01-.137.013s-.095.006-.142.014a1.675,1.675,0,0,0-.213.055c-.038.012-.077.02-.113.034a1.624,1.624,0,0,0-.224.112c-.027.015-.055.026-.081.042a1.664,1.664,0,0,0-.761,1.4v2.507a1.671,1.671,0,0,1-3.343,0V137.4a1.667,1.667,0,0,0-.925-1.488l-.026-.014a1.6,1.6,0,0,0-.206-.081c-.042-.014-.08-.028-.121-.038a1.611,1.611,0,0,0-.162-.029c-.037-.005-.072-.016-.109-.019s-.08,0-.122,0A1.671,1.671,0,0,0,4.571,137.4v1.671a1.674,1.674,0,0,1-.486,1.182,1.724,1.724,0,0,1-1.561.443,1.667,1.667,0,0,1-.292-.091,1.72,1.72,0,0,1-.514-.349,1.678,1.678,0,0,1-.489-1.185Zm1.254,10.446v-4.213c.042.007.084.009.125.014l.032,0a2.516,2.516,0,0,0,1.082-.125,2.547,2.547,0,0,0,.31-.133l.064-.033a2.564,2.564,0,0,0,.236-.145c.024-.017.049-.032.073-.05a2.437,2.437,0,0,0,1-2V137.4a.83.83,0,0,1,.245-.59.847.847,0,0,1,.137-.11l.027-.014a.827.827,0,0,1,.128-.064l.039-.012a.8.8,0,0,1,.125-.031c.02,0,.042,0,.061-.006a.911.911,0,0,1,.106,0,1.07,1.07,0,0,1,.172.025l.03.009a.913.913,0,0,1,.6.869v2.437a2.507,2.507,0,0,0,5.014,0V137.4a.833.833,0,0,1,.383-.7l.023-.012a.834.834,0,0,1,.133-.066l.036-.011a.886.886,0,0,1,.125-.033l.06-.006a.833.833,0,0,1,.106,0,1.072,1.072,0,0,1,.172.025l.03.009a.913.913,0,0,1,.6.869v.765a2.507,2.507,0,1,0,5.014,0V137.4a.83.83,0,0,1,.245-.59.848.848,0,0,1,.137-.11l.028-.015a.858.858,0,0,1,.128-.063c.013,0,.027-.008.042-.012a.78.78,0,0,1,.123-.031c.02,0,.042,0,.061-.006a.918.918,0,0,1,.106,0,1.074,1.074,0,0,1,.172.025l.03.009a.913.913,0,0,1,.6.869v1.6a2.51,2.51,0,0,0,.734,1.776,2.553,2.553,0,0,0,.264.225c.027.02.055.037.084.056.07.048.141.092.215.133l.088.046a2.56,2.56,0,0,0,.259.111l.053.02a2.541,2.541,0,0,0,.71.134h0a2.5,2.5,0,0,0,.349-.01l.042,0c.042,0,.084-.006.125-.013v4.213Zm0,0" transform="translate(-0.392 -121.114)" fill="#f2f2f2"/>
                         <path id="Tracé_148" data-name="Tracé 148" d="M202.487,5.839a2.092,2.092,0,0,0,2.089-2.089c0-1-1.454-3.159-1.745-3.58a.434.434,0,0,0-.688,0c-.292.422-1.745,2.577-1.745,3.58A2.092,2.092,0,0,0,202.487,5.839Zm0-4.677a8.131,8.131,0,0,1,1.254,2.587,1.254,1.254,0,0,1-2.507,0A8.131,8.131,0,0,1,202.487,1.162Zm0,0" transform="translate(-189.951 0)" fill="#f2f2f2"/>
                         <path id="Tracé_149" data-name="Tracé 149" d="M338.487,21.839a2.092,2.092,0,0,0,2.089-2.089c0-1-1.454-3.159-1.745-3.58a.434.434,0,0,0-.688,0c-.292.422-1.745,2.577-1.745,3.58A2.092,2.092,0,0,0,338.487,21.839Zm0-4.677a8.131,8.131,0,0,1,1.254,2.587,1.254,1.254,0,0,1-2.507,0A8.131,8.131,0,0,1,338.487,17.162Zm0,0" transform="translate(-318.848 -15.164)" fill="#f2f2f2"/>
                         <path id="Tracé_150" data-name="Tracé 150" d="M66.487,21.839a2.092,2.092,0,0,0,2.089-2.089c0-1-1.454-3.159-1.745-3.58a.434.434,0,0,0-.688,0c-.292.422-1.745,2.577-1.745,3.58A2.092,2.092,0,0,0,66.487,21.839Zm0-4.677a8.131,8.131,0,0,1,1.254,2.587,1.254,1.254,0,1,1-2.507,0A8.131,8.131,0,0,1,66.487,17.162Zm0,0" transform="translate(-61.055 -15.164)" fill="#f2f2f2"/>
                     </svg>
-                    <select name="age" required>
-                        <option value="0">Age</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                        <option value="32">32</option>
-                        <option value="33">33</option>
-                        <option value="34">34</option>
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                        <option value="47">47</option>
-                        <option value="48">48</option>
-                        <option value="49">49</option>
-                        <option value="50">50</option>
-                        <option value="51">51</option>
-                        <option value="52">52</option>
-                        <option value="53">53</option>
-                        <option value="54">54</option>
-                        <option value="55">55</option>
-                        <option value="56">56</option>
-                        <option value="57">57</option>
-                        <option value="58">58</option>
-                        <option value="59">59</option>
-                        <option value="60">60</option>
-                        <option value="61">61</option>
-                        <option value="62">62</option>
-                        <option value="63">63</option>
-                        <option value="64">64</option>
-                        <option value="65">65</option>
-                        <option value="66">66</option>
-                        <option value="67">67</option>
-                        <option value="68">68</option>
-                        <option value="69">69</option>
-                        <option value="70">70</option>
-                        <option value="71">71</option>
-                        <option value="72">72</option>
-                        <option value="73">73</option>
-                        <option value="74">74</option>
-                        <option value="75">75</option>
-                        <option value="76">76</option>
-                        <option value="77">77</option>
-                        <option value="78">78</option>
-                        <option value="79">79</option>
-                        <option value="80">80</option>
-                        <option value="81">81</option>
-                        <option value="82">82</option>
-                        <option value="83">83</option>
-                        <option value="84">84</option>
-                        <option value="85">85</option>
-                        <option value="86">86</option>
-                        <option value="87">87</option>
-                        <option value="88">88</option>
-                        <option value="89">89</option>
-                        <option value="90">90</option>
-                        <option value="91">91</option>
-                        <option value="92">92</option>
-                        <option value="93">93</option>
-                        <option value="94">94</option>
-                        <option value="95">95</option>
-                        <option value="96">96</option>
-                        <option value="97">97</option>
-                        <option value="98">98</option>
-                        <option value="99">99</option>
-                        <option value="100">100</option>
-                    </select>
+                    <input type="number" name="age" min="1" max="100" value="<?php if (isset($age)) {echo $age;}?>" placeholder="Age" required>
                 </div>
                 <div class="g-recaptcha" data-sitekey="6LfOP5QaAAAAAOTF8Nr7ek3mUg2vp8LbR3Hgx42i"></div>
                 <div class="field checkbox">
@@ -637,13 +609,18 @@ if(isset($_POST['submit'])) {
                 <div class="field button">
                         <input type="submit" class="ctaform" name="submit" value="S'inscrire">
                 </div>
+                <?php
+                    if(isset($erreur)){
+                        echo $erreur;
+                    }
+                ?>
                 <p>Tous les champs sont obligatoires</p>
             </form>
         </div>
 
         <div class="carddeux formspon">
             <h1>Personnaliser votre expérience</h1>
-            <form action="home.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="select">
                     <svg id="music" xmlns="http://www.w3.org/2000/svg" width="25.589" height="25.589" viewBox="0 0 25.589 25.589">
                         <g id="Groupe_803" data-name="Groupe 803">
@@ -709,59 +686,7 @@ if(isset($_POST['submit'])) {
                             <circle id="Ellipse_2591" data-name="Ellipse 2591" cx="1" cy="1" r="1" transform="translate(8.211 8.211)" fill="#f2f2f2"/>
                         </g>
                     </svg>
-                    <select name="Année de pratique">
-                        <option value="0">Année de pratique</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                        <option value="32">32</option>
-                        <option value="33">33</option>
-                        <option value="34">34</option>
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                        <option value="47">47</option>
-                        <option value="48">48</option>
-                        <option value="49">49</option>
-                        <option value="50">50</option>
-                    </select>
+                    <input type="number" name="yearOfPractise" min="1" max="100" placeholder="Année.s de pratique" required>
                 </div>
                 <div class="back">
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="10.591" height="18.643" viewBox="0 0 10.591 18.643">
@@ -786,7 +711,7 @@ if(isset($_POST['submit'])) {
                 </div>
                 <div class="field button">
                     <a href="feed.php" rel="noopener">
-                        <input type="submit" class="ctaform" name="submit" value="C'est parti">
+                        <input type="submit" class="ctaform" name="submit2" value="C'est parti">
                     </a>
                 </div>
             </form>
@@ -820,6 +745,7 @@ if(isset($_POST['submit'])) {
     }
 </script>
 <script>
+    /*
     const firstform = document.querySelector('.card');
     const secondeform = document.querySelector('.carddeux');
     const formcta = document.querySelector('.card .ctaform');
@@ -835,7 +761,7 @@ if(isset($_POST['submit'])) {
     function comeback() {
         firstform.classList.remove("formspon");
         secondeform.classList.add("formspon");
-    }
+    }*/
 </script>
 </body>
 </html>

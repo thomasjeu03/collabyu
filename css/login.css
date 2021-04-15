@@ -39,59 +39,6 @@ body{
     background-color: #1A2537;
 }
 
-.loader{
-    z-index: 60;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(#1A2537, #1A2547);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logoloader{
-    transform: translateY(350px) rotate(180deg);
-    animation: gravity 2.6s ease infinite;
-}
-@keyframes gravity {
-    0% {
-        transform: translateY(-350px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(350px) rotate(180deg);
-    }
-    100% {
-        transform: translateY(-350px) rotate(0deg);
-    }
-}
-.vert{
-    opacity: 0;
-    animation: vert 1.3s ease infinite;
-}
-.rose{
-    opacity: 0;
-    animation: vert 1.3s ease infinite;
-}
-@keyframes vert {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.disparition{
-    opacity: 0;
-    z-index: -50;
-    transition: opacity 1s ease-out;
-}
 
 
 header{

@@ -11,12 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="test2">
+      <change afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/class.MusicalGenre.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/class.MusicalGenre.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +113,7 @@
       <workItem from="1618424872496" duration="6268000" />
       <workItem from="1618434584915" duration="1967000" />
       <workItem from="1618481788872" duration="2309000" />
+      <workItem from="1618494482464" duration="18680000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1616855832322</created>
@@ -169,10 +174,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1617091519299" />
-    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618175139913">
+    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618513838045">
       <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
-    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618175139913" />
+    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618513838045" />
     <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471267668" />
     <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1618044721951" />
     <state x="461" y="170" width="1242" height="709" key="SettingsEditor" timestamp="1617091528328">
@@ -205,10 +210,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="838" y="399" width="631" height="507" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617091527184" />
-    <state x="2" y="247" key="run.anything.popup" timestamp="1618047512777">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1079" y="-388" key="run.anything.popup" timestamp="1618499130268">
+      <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
+    <state x="-1079" y="-388" key="run.anything.popup/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618499130268" />
     <state x="2" y="247" key="run.anything.popup/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617979341102" />
     <state x="2" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1618047512777" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/home.php</url>
+          <line>129</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

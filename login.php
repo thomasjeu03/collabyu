@@ -1,3 +1,34 @@
+<?php
+session_start();
+
+$bdd = new PDO (
+    'mysql:host=127.0.0.1;dbname=collabyu;charset=utf8',
+    'root',
+    'root');
+
+if (isset($_POST['submitconnect'])){
+    $mailconnect = htmlspecialchars($_POST['mailconnect']);
+    $mdpconnect = sha1($_POST['passwordconnect']);
+
+    if(!empty($mailconnect) AND !empty($mdpconnect)){
+        $requser = $bdd->prepare("SELECT * FROM users WHERE user_mail_USERS = ? AND user_password_USERS = ?");
+        $requser->execute(array($mailconnect,$mdpconnect));
+        $userexist = $requser->rowCount();
+        if($userexist == 1){
+            $userinfo = $requser->fetch();
+            $_SESSION['user_id_USERS'] = $userinfo['user_id_USERS'];
+            $_SESSION['user_username_USERS'] = $userinfo['user_username_USERS'];
+            $_SESSION['user_mail_USERS'] = $userinfo['user_mail_USERS'];
+            header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
+        }else{
+            $erreur = "Adresse mail ou mot de passe incorrect";
+        }
+    }else{
+        $error = "";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,15 +52,6 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<div class="loader">
-    <svg class="logoloader" xmlns="http://www.w3.org/2000/svg" width="106" height="109" viewBox="0 0 106 109">
-        <g id="logo_svg" data-name="logo svg" transform="translate(-246 -597)">
-            <path class="vert" id="vert" d="M17,0H35A17,17,0,0,1,52,17v0A17,17,0,0,1,35,34H0a0,0,0,0,1,0,0V17A17,17,0,0,1,17,0Z" transform="translate(300 597)" fill="#009380"/>
-            <path class="rose" id="rose" d="M21,0H63a0,0,0,0,1,0,0V21A21,21,0,0,1,42,42H21A21,21,0,0,1,0,21v0A21,21,0,0,1,21,0Z" transform="translate(246 664)" fill="#ec1d53"/>
-            <path id="blanc" d="M3,0H9A0,0,0,0,1,9,0V22a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V3A3,3,0,0,1,3,0Z" transform="translate(300 635)" fill="#f2f2f2"/>
-        </g>
-    </svg>
-</div>
 
 <header>
     <div class="gauche">
@@ -435,7 +457,7 @@
         </a>
         <div class="card">
             <h1>Se connecter</h1>
-            <form action="home.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="field input inputun">
                     <svg xmlns="http://www.w3.org/2000/svg" width="23.9" height="27.961" viewBox="0 0 23.9 27.961">
                         <g id="icon_profil" data-name="icon profil" transform="translate(0.531)">
@@ -446,8 +468,9 @@
                             <path id="Tracé_123" data-name="Tracé 123" d="M4786.133,458.461H4808.9s1.23-10.4-11.445-10.4S4786.133,458.461,4786.133,458.461Z" transform="translate(-4786.091 -431)" fill="none" stroke="#f2f2f2" stroke-width="1"/>
                         </g>
                     </svg>
-                    <input type="text" name="username" placeholder="Nom d'utilisateur / Adresse mail" autofocus required>
+                    <input type="email" name="mailconnect" value="<?php if (isset($mailconnect)) {echo $mailconnect;}?>" placeholder="Adresse mail" autofocus required>
                 </div>
+
                 <div class="field input inputdeux">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21.082" height="27.074" viewBox="0 0 21.082 27.074">
                         <g id="icon_cadena" data-name="icon cadena" transform="translate(0 0.5)">
@@ -463,12 +486,17 @@
                             <line id="Ligne_3" data-name="Ligne 3" y2="5" transform="translate(10.541 17.075)" fill="none" stroke="#ec1d53" stroke-linecap="round" stroke-width="1"/>
                         </g>
                     </svg>
-                    <input type="password" name="password" placeholder="Mot de passe" required>
+                    <input type="password" name="passwordconnect" placeholder="Mot de passe" required>
                     <i class="fas fa-eye"></i>
                 </div>
-                <div class="error-text">Mot de passe incorrect</div>
+                <?php
+                if(!empty($erreur)){
+                    ?>
+                    <div class="error-text"><?=$erreur?></div>
+                <?php }
+                ?>
                 <div class="field button">
-                    <input type="submit" name="submit" value="Se connecter">
+                    <input type="submit" name="submitconnect" value="Se connecter">
                 </div>
             </form>
             <a href="signup.php" rel="noopener">
