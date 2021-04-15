@@ -11,40 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="test2">
-      <change afterPath="$PROJECT_DIR$/class/class.Collaboration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/class.ExternLink.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/class.Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/class.MusicalGenre.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/class.User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo collabyU.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/ReCaptcha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Curl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/CurlPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/Socket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestMethod/SocketPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/RequestParameters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/ReCaptcha/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recaptcha/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/accueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/chat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/neural.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/resume.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/class.MusicalGenre.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/class.MusicalGenre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Documents/Etudes/Université/MMI 1er année/Intégration web/css_grid_exo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -135,6 +107,8 @@
       <workItem from="1618259008053" duration="62000" />
       <workItem from="1618259073187" duration="3000" />
       <workItem from="1618424872496" duration="6268000" />
+      <workItem from="1618434584915" duration="1967000" />
+      <workItem from="1618481788872" duration="2309000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1616855832322</created>
@@ -206,15 +180,17 @@
     </state>
     <state x="461" y="170" width="1242" height="709" key="SettingsEditor/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617044034488" />
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1617091528328" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1618433923739">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-816" y="-369" key="Vcs.Push.Dialog.v2" timestamp="1618493443005">
+      <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
+    <state x="-816" y="-369" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618493443005" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1080.-833.1080.1890@0.0.1920.1050" timestamp="1618433923739" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856074625" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1617003648864" />
-    <state x="1100" y="0" width="745" height="1030" key="dock-window-1" timestamp="1617958695163">
+    <state x="90" y="0" width="913" height="1137" key="dock-window-1" timestamp="1618492061271">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="90" y="0" width="913" height="1137" key="dock-window-1/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618492061271" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471348863" />
     <state x="1100" y="0" width="745" height="1030" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1617958695163" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-2" timestamp="1616856546378">

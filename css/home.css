@@ -117,7 +117,7 @@ a{
 
 main{
     width: 577px;
-    height: 200vh;
+    height: auto;
     padding: 0 30px 60px 30px;
     transform: translateX(-73px);
     position: relative;
@@ -168,6 +168,16 @@ main{
 }
 .localisation p{
     margin-left: 7px;
+}
+.musicalGenreListe>p, .instrumentListe>p{
+    margin-right: 7px;
+    height: auto;
+    width: auto;
+    border-radius: 15px 15px 0 15px;
+    background-color: #F2F2F2;
+    padding: 3px 10px;
+    margin-top: 5px;
+    color: #1A2537;
 }
 .localisation, .instrumentListe, .musicalGenreListe{
     display: flex;

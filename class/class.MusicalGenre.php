@@ -3,9 +3,9 @@
         private $id = 0;
         private $name = null;
 
-        function __construct($id, $name){
-            $this->id = $id;
-            $this->name = $name;
+        function __construct(array $donnees){
+            $this->id = $donnees["musicalgenre_id_MUSICALGENRE"];
+            $this->name = $donnees["musicalgenre_name_MUSICALGENRE"];
         }
 
         /**

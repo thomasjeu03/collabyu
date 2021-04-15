@@ -126,16 +126,215 @@
                 <div class="instrument">
                     <p>Intruments</p>
                     <div class="instrumentListe">
-                        <p>$[instrument1]</p>
-                        <p>$[instrument1]</p>
+                        <p><?=$listUser[0]->getInstrument()?></p>
                     </div>
                 </div>
                 <div class="musicalGenre">
                     <p>Genre musicaux</p>
                     <div class="musicalGenreListe">
-                        <p>$[musicalGenre]</p>
-                        <p>$[musicalGenre]</p>
-                        <p>$[musicalGenre]</p>
+                        <p><?=$listGenre[0]->getName()?></p>
+                        <p><?=$listGenre[2]->getName()?></p>
+                        <p><?=$listGenre[17]->getName()?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="cardProfil">
+            <div class="left">
+                <div class="id">
+                    <a href="" rel="noopener">
+                        <img src="img/PP.jpg" alt="Photo de profil $[surname].[name]" height="60" width="60">
+                    </a>
+                    <div class="cardIdRight">
+                        <a href="" rel="noopener">
+                            <p><?=$listUser[0]->getSurname()?> <?=$listUser[0]->getName()?></p>
+                            <p><?=$listUser[0]->getUsername()?></p>
+                        </a>
+                        <p><?=$listUser[0]->getProfil()?></p>
+                    </div>
+
+                </div>
+                <p><?=$listUser[0]->getBiographie()?></p>
+                <div class="localisation">
+                    <svg id="placeholder" xmlns="http://www.w3.org/2000/svg" width="14.312" height="20.355" viewBox="0 0 14.312 20.355">
+                        <g id="Groupe_811" data-name="Groupe 811">
+                            <g id="Groupe_810" data-name="Groupe 810">
+                                <path id="Tracé_153" data-name="Tracé 153" d="M83.156,0a7.157,7.157,0,0,0-6.088,10.919l5.68,9.154a.6.6,0,0,0,.507.282h0a.6.6,0,0,0,.507-.29L89.3,10.822A7.157,7.157,0,0,0,83.156,0Zm5.123,10.21-5.033,8.4L78.082,10.29a5.967,5.967,0,1,1,10.2-.081Z" transform="translate(-76)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                        <g id="Groupe_813" data-name="Groupe 813" transform="translate(3.578 3.578)">
+                            <g id="Groupe_812" data-name="Groupe 812">
+                                <path id="Tracé_154" data-name="Tracé 154" d="M169.578,90a3.578,3.578,0,1,0,3.578,3.578A3.582,3.582,0,0,0,169.578,90Zm0,5.971a2.393,2.393,0,1,1,2.389-2.393A2.4,2.4,0,0,1,169.578,95.971Z" transform="translate(-166 -90)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p><?=$listUser[0]->getLocalisation()?></p>
+                </div>
+                <div class="instrument">
+                    <p>Intruments</p>
+                    <div class="instrumentListe">
+                        <p><?=$listUser[0]->getInstrument()?></p>
+                    </div>
+                </div>
+                <div class="musicalGenre">
+                    <p>Genre musicaux</p>
+                    <div class="musicalGenreListe">
+                        <p><?=$listGenre[0]->getName()?></p>
+                        <p><?=$listGenre[2]->getName()?></p>
+                        <p><?=$listGenre[17]->getName()?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="cardProfil">
+            <div class="left">
+                <div class="id">
+                    <a href="" rel="noopener">
+                        <img src="img/PP.jpg" alt="Photo de profil $[surname].[name]" height="60" width="60">
+                    </a>
+                    <div class="cardIdRight">
+                        <a href="" rel="noopener">
+                            <p><?=$listUser[0]->getSurname()?> <?=$listUser[0]->getName()?></p>
+                            <p><?=$listUser[0]->getUsername()?></p>
+                        </a>
+                        <p><?=$listUser[0]->getProfil()?></p>
+                    </div>
+
+                </div>
+                <p><?=$listUser[0]->getBiographie()?></p>
+                <div class="localisation">
+                    <svg id="placeholder" xmlns="http://www.w3.org/2000/svg" width="14.312" height="20.355" viewBox="0 0 14.312 20.355">
+                        <g id="Groupe_811" data-name="Groupe 811">
+                            <g id="Groupe_810" data-name="Groupe 810">
+                                <path id="Tracé_153" data-name="Tracé 153" d="M83.156,0a7.157,7.157,0,0,0-6.088,10.919l5.68,9.154a.6.6,0,0,0,.507.282h0a.6.6,0,0,0,.507-.29L89.3,10.822A7.157,7.157,0,0,0,83.156,0Zm5.123,10.21-5.033,8.4L78.082,10.29a5.967,5.967,0,1,1,10.2-.081Z" transform="translate(-76)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                        <g id="Groupe_813" data-name="Groupe 813" transform="translate(3.578 3.578)">
+                            <g id="Groupe_812" data-name="Groupe 812">
+                                <path id="Tracé_154" data-name="Tracé 154" d="M169.578,90a3.578,3.578,0,1,0,3.578,3.578A3.582,3.582,0,0,0,169.578,90Zm0,5.971a2.393,2.393,0,1,1,2.389-2.393A2.4,2.4,0,0,1,169.578,95.971Z" transform="translate(-166 -90)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p><?=$listUser[0]->getLocalisation()?></p>
+                </div>
+                <div class="instrument">
+                    <p>Intruments</p>
+                    <div class="instrumentListe">
+                        <p><?=$listUser[0]->getInstrument()?></p>
+                    </div>
+                </div>
+                <div class="musicalGenre">
+                    <p>Genre musicaux</p>
+                    <div class="musicalGenreListe">
+                        <p><?=$listGenre[0]->getName()?></p>
+                        <p><?=$listGenre[2]->getName()?></p>
+                        <p><?=$listGenre[17]->getName()?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="cardProfil">
+            <div class="left">
+                <div class="id">
+                    <a href="" rel="noopener">
+                        <img src="img/PP.jpg" alt="Photo de profil $[surname].[name]" height="60" width="60">
+                    </a>
+                    <div class="cardIdRight">
+                        <a href="" rel="noopener">
+                            <p><?=$listUser[0]->getSurname()?> <?=$listUser[0]->getName()?></p>
+                            <p><?=$listUser[0]->getUsername()?></p>
+                        </a>
+                        <p><?=$listUser[0]->getProfil()?></p>
+                    </div>
+
+                </div>
+                <p><?=$listUser[0]->getBiographie()?></p>
+                <div class="localisation">
+                    <svg id="placeholder" xmlns="http://www.w3.org/2000/svg" width="14.312" height="20.355" viewBox="0 0 14.312 20.355">
+                        <g id="Groupe_811" data-name="Groupe 811">
+                            <g id="Groupe_810" data-name="Groupe 810">
+                                <path id="Tracé_153" data-name="Tracé 153" d="M83.156,0a7.157,7.157,0,0,0-6.088,10.919l5.68,9.154a.6.6,0,0,0,.507.282h0a.6.6,0,0,0,.507-.29L89.3,10.822A7.157,7.157,0,0,0,83.156,0Zm5.123,10.21-5.033,8.4L78.082,10.29a5.967,5.967,0,1,1,10.2-.081Z" transform="translate(-76)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                        <g id="Groupe_813" data-name="Groupe 813" transform="translate(3.578 3.578)">
+                            <g id="Groupe_812" data-name="Groupe 812">
+                                <path id="Tracé_154" data-name="Tracé 154" d="M169.578,90a3.578,3.578,0,1,0,3.578,3.578A3.582,3.582,0,0,0,169.578,90Zm0,5.971a2.393,2.393,0,1,1,2.389-2.393A2.4,2.4,0,0,1,169.578,95.971Z" transform="translate(-166 -90)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p><?=$listUser[0]->getLocalisation()?></p>
+                </div>
+                <div class="instrument">
+                    <p>Intruments</p>
+                    <div class="instrumentListe">
+                        <p><?=$listUser[0]->getInstrument()?></p>
+                    </div>
+                </div>
+                <div class="musicalGenre">
+                    <p>Genre musicaux</p>
+                    <div class="musicalGenreListe">
+                        <p><?=$listGenre[0]->getName()?></p>
+                        <p><?=$listGenre[2]->getName()?></p>
+                        <p><?=$listGenre[17]->getName()?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="cardProfil">
+            <div class="left">
+                <div class="id">
+                    <a href="" rel="noopener">
+                        <img src="img/PP.jpg" alt="Photo de profil $[surname].[name]" height="60" width="60">
+                    </a>
+                    <div class="cardIdRight">
+                        <a href="" rel="noopener">
+                            <p><?=$listUser[0]->getSurname()?> <?=$listUser[0]->getName()?></p>
+                            <p><?=$listUser[0]->getUsername()?></p>
+                        </a>
+                        <p><?=$listUser[0]->getProfil()?></p>
+                    </div>
+
+                </div>
+                <p><?=$listUser[0]->getBiographie()?></p>
+                <div class="localisation">
+                    <svg id="placeholder" xmlns="http://www.w3.org/2000/svg" width="14.312" height="20.355" viewBox="0 0 14.312 20.355">
+                        <g id="Groupe_811" data-name="Groupe 811">
+                            <g id="Groupe_810" data-name="Groupe 810">
+                                <path id="Tracé_153" data-name="Tracé 153" d="M83.156,0a7.157,7.157,0,0,0-6.088,10.919l5.68,9.154a.6.6,0,0,0,.507.282h0a.6.6,0,0,0,.507-.29L89.3,10.822A7.157,7.157,0,0,0,83.156,0Zm5.123,10.21-5.033,8.4L78.082,10.29a5.967,5.967,0,1,1,10.2-.081Z" transform="translate(-76)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                        <g id="Groupe_813" data-name="Groupe 813" transform="translate(3.578 3.578)">
+                            <g id="Groupe_812" data-name="Groupe 812">
+                                <path id="Tracé_154" data-name="Tracé 154" d="M169.578,90a3.578,3.578,0,1,0,3.578,3.578A3.582,3.582,0,0,0,169.578,90Zm0,5.971a2.393,2.393,0,1,1,2.389-2.393A2.4,2.4,0,0,1,169.578,95.971Z" transform="translate(-166 -90)" fill="#f2f2f2"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p><?=$listUser[0]->getLocalisation()?></p>
+                </div>
+                <div class="instrument">
+                    <p>Intruments</p>
+                    <div class="instrumentListe">
+                        <p><?=$listUser[0]->getInstrument()?></p>
+                    </div>
+                </div>
+                <div class="musicalGenre">
+                    <p>Genre musicaux</p>
+                    <div class="musicalGenreListe">
+                        <p><?=$listGenre[0]->getName()?></p>
+                        <p><?=$listGenre[2]->getName()?></p>
+                        <p><?=$listGenre[17]->getName()?></p>
                     </div>
                 </div>
             </div>
@@ -150,8 +349,6 @@
 
         </div>
     </aside>
-
-
 
 <script>
     AOS.init();
