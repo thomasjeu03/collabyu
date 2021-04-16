@@ -280,6 +280,10 @@ textarea{
     border: 2px solid #EC1D53;
     color: #F2F2F2;
     font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: "Gotham Black";
     font-weight: 500;
     background-color: #EC1D53;
@@ -324,23 +328,6 @@ p{
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
-}
-.back{
-    display: flex;
-    align-items: center;
-    margin-top: 44px;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 42%;
-    height: auto;
-    cursor: pointer;
-}
-.back p{
-    font-size: 14px;
-    color: #009380;
-}
-.back >*{
-    margin-right: 10px;
 }
 .arrow{
     transition: 0.4s ease-in-out;

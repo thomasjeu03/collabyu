@@ -7,6 +7,8 @@ $bdd = new PDO (
     'root');
 
 if (isset($_POST['submitconnect'])){
+    $getid = intval($_GET['user_id_USERS']);
+
     $mailconnect = htmlspecialchars($_POST['mailconnect']);
     $mdpconnect = sha1($_POST['passwordconnect']);
 
@@ -19,7 +21,13 @@ if (isset($_POST['submitconnect'])){
             $_SESSION['user_id_USERS'] = $userinfo['user_id_USERS'];
             $_SESSION['user_username_USERS'] = $userinfo['user_username_USERS'];
             $_SESSION['user_mail_USERS'] = $userinfo['user_mail_USERS'];
-            header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
+            $lastlogin = 'SELECT user_lastlogin_USERS FROM users WHERE user_id_USERS= ?';
+            if ($lastlogin = false){
+                header("Location: custom.php?user_id_USERS=".$_SESSION['user_id_USERS']);
+                $lastlogin = true;
+            }else{
+                header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
+            }
         }else{
             $erreur = "Adresse mail ou mot de passe incorrect";
         }

@@ -3,7 +3,7 @@
         private $id = 0;
         private $userName = null;
         private $name = null;
-        private $surname = null;
+        private $lastlogin = null;
         private $profil = null;
         private $biographie = null;
         private $localisation = null;
@@ -20,7 +20,7 @@
             $this->id = $donnees["user_id_USERS"];
             $this->userName = $donnees["user_username_USERS"];
             $this->name = $donnees["user_name_USERS"];
-            $this->surname = $donnees["user_surname_USERS"];
+            $this->lastlogin = $donnees["user_lastlogin_USERS"];
             $this->profil = $donnees["user_profil_USERS"];
             $this->biographie = $donnees["user_biographie_USERS"];
             $this->localisation = $donnees["user_localisation_USERS"];
@@ -59,11 +59,11 @@
         }
 
         /**
-         * @param null $surname
+         * @param null $lastlogin
          */
-        public function setSurname($surname)
+        public function setLastlogin($lastlogin)
         {
-            $this->surname = $surname;
+            $this->lastlogin = $lastlogin;
         }
 
         /**
@@ -184,9 +184,9 @@
         /**
          * @return null
          */
-        public function getSurname()
+        public function getLastlogin()
         {
-            return $this->surname;
+            return $this->lastlogin;
         }
 
         /**

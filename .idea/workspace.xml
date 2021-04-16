@@ -11,15 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="test2">
-      <change afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/class.User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/class.User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +109,8 @@
       <workItem from="1618424872496" duration="6268000" />
       <workItem from="1618434584915" duration="1967000" />
       <workItem from="1618481788872" duration="2309000" />
-      <workItem from="1618494482464" duration="18680000" />
+      <workItem from="1618494482464" duration="18876000" />
+      <workItem from="1618566416815" duration="14531000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1616855832322</created>
@@ -174,10 +171,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1617091519299" />
-    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618513838045">
+    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618598489101">
       <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
-    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618513838045" />
+    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618598489101" />
     <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471267668" />
     <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1618044721951" />
     <state x="461" y="170" width="1242" height="709" key="SettingsEditor" timestamp="1617091528328">
@@ -192,10 +189,10 @@
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1080.-833.1080.1890@0.0.1920.1050" timestamp="1618433923739" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856074625" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1617003648864" />
-    <state x="90" y="0" width="913" height="1137" key="dock-window-1" timestamp="1618492061271">
+    <state x="115" y="114" width="1341" height="1047" key="dock-window-1" timestamp="1618599356774">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="90" y="0" width="913" height="1137" key="dock-window-1/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618492061271" />
+    <state x="115" y="114" width="1341" height="1047" key="dock-window-1/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618599356774" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471348863" />
     <state x="1100" y="0" width="745" height="1030" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1617958695163" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-2" timestamp="1616856546378">

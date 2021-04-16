@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
                             $insertuser = $bdd->prepare("INSERT INTO users(user_username_USERS,user_mail_USERS,user_password_USERS,user_name_USERS,user_age_USERS) VALUES(?,?,?,?,?)");
                             $insertuser->execute(array($username, $email, $password2, $pseudo, $age));
                             $_SESSION['comptecree'] = "Votre compte a bien été créé !";
-                            header('Location: home.php');
+                            header("Location: login.php");
                         } else {
                             $erreurpassword = "Votre mot de passe n'a pas été confirmé";
                         }
@@ -56,8 +56,6 @@ if (isset($_POST['submit'])) {
         $erreur = "";
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -578,7 +576,6 @@ if (isset($_POST['submit'])) {
                         <div class="error-text"><?=$erreurpassword?></div>
                     <?php }
                     ?>
-
                 <div class="field input">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31.719" height="27.961" viewBox="0 0 31.719 27.961">
                         <g id="icon_profil" data-name="icon profil" transform="translate(0.531)">
@@ -609,122 +606,14 @@ if (isset($_POST['submit'])) {
                 <div class="field button">
                         <input type="submit" class="ctaform" name="submit" value="S'inscrire">
                 </div>
-                <?php
-                    if(isset($erreur)){
-                        echo $erreur;
-                    }
-                ?>
                 <p>Tous les champs sont obligatoires</p>
             </form>
         </div>
 
-        <div class="carddeux formspon">
-            <h1>Personnaliser votre expérience</h1>
-            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
-                <div class="select">
-                    <svg id="music" xmlns="http://www.w3.org/2000/svg" width="25.589" height="25.589" viewBox="0 0 25.589 25.589">
-                        <g id="Groupe_803" data-name="Groupe 803">
-                            <path id="Tracé_138" data-name="Tracé 138" d="M25.285.237a.928.928,0,0,0-.71-.228L8.125,1.837a.914.914,0,0,0-.813.908V19.032a5.288,5.288,0,0,0-2.742-.75c-2.52,0-4.57,1.64-4.57,3.656s2.05,3.656,4.569,3.656,4.569-1.639,4.569-3.656V8.138L23.761,6.509V17.2a5.288,5.288,0,0,0-2.742-.748c-2.52,0-4.569,1.64-4.569,3.656s2.05,3.656,4.569,3.656,4.569-1.639,4.569-3.656V.918A.914.914,0,0,0,25.285.237Z" transform="translate(0 -0.004)" fill="#f2f2f2"/>
-                        </g>
-                    </svg>
-                    <select name="Genre musicaux">
-                        <option value="0">Genre musicaux</option>
-                        <option value="1">Beatbox</option>
-                        <option value="2">Blues</option>
-                        <option value="3">Chœur</option>
-                        <option value="4">Classique</option>
-                        <option value="5">Dubstep</option>
-                        <option value="6">EDM</option>
-                        <option value="7">Electro Swing</option>
-                        <option value="8">Hardrock</option>
-                        <option value="9">Hip Hop</option>
-                        <option value="10">Indie</option>
-                        <option value="11">Jazz</option>
-                        <option value="12">Jazz contemporain</option>
-                        <option value="13">Lo-fi</option>
-                        <option value="14">Métal</option>
-                        <option value="15">Musique de chambre</option>
-                        <option value="16">Pop</option>
-                        <option value="17">Rap FR</option>
-                        <option value="18">Rap US</option>
-                        <option value="19">Raggae</option>
-                        <option value="20">Rhythm and blues</option>
-                        <option value="21">Rock'n'roll</option>
-                        <option value="22">Variété française</option>
-                    </select>
-                </div>
-                <div class="field input">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26.14" height="26.124" viewBox="0 0 26.14 26.124">
-                        <g id="guitar" transform="translate(0 0)">
-                            <g id="Groupe_805" data-name="Groupe 805" transform="translate(3.487 16.975)">
-                                <g id="Groupe_804" data-name="Groupe 804">
-                                    <path id="Tracé_139" data-name="Tracé 139" d="M69.563,315.493l-3.485-3.485a.436.436,0,0,0-.616,0l-1.307,1.307a.436.436,0,0,0,0,.616l3.485,3.485a.436.436,0,0,0,.616,0l1.307-1.307A.436.436,0,0,0,69.563,315.493Zm-1.615,1-2.869-2.869.691-.691,2.869,2.869Z" transform="translate(-64.028 -311.881)" fill="#f2f2f2"/>
-                                </g>
-                            </g>
-                            <g id="Groupe_807" data-name="Groupe 807">
-                                <g id="Groupe_806" data-name="Groupe 806">
-                                    <path id="Tracé_140" data-name="Tracé 140" d="M25.705,3.8a1.488,1.488,0,0,0,0-2.1L24.579.574a1.525,1.525,0,0,0-2.1,0L22.22.829,21.657.266l-.616.616.563.563-.691.691-.563-.563-.616.616.581.581a1.474,1.474,0,0,0-.273.854,1.537,1.537,0,0,0,.023.233L14.256,9.664,13.9,9.307a3.043,3.043,0,0,0-4.3,0h0L8.37,10.532a5.639,5.639,0,0,1-2.722,1.509l-.6.138A6.514,6.514,0,0,0,1.91,23.133l1.236,1.236A6.515,6.515,0,0,0,14.1,21.228l.138-.6a5.635,5.635,0,0,1,1.508-2.722l1.225-1.225a3.046,3.046,0,0,0,0-4.3l-.357-.357,5.808-5.808a1.535,1.535,0,0,0,.233.023,1.473,1.473,0,0,0,.853-.273l.581.581.616-.616-.563-.563.691-.691.563.563.616-.616-.563-.563ZM16.356,16.067l-1.225,1.225a6.508,6.508,0,0,0-1.743,3.141l-.138.6a5.643,5.643,0,0,1-9.489,2.722L2.526,22.517a5.643,5.643,0,0,1,2.721-9.489l.6-.137a6.509,6.509,0,0,0,3.142-1.743l1.226-1.225a2.171,2.171,0,0,1,3.071,0h0l.357.357-2.068,2.068c-.081-.007-.162-.011-.244-.011a2.614,2.614,0,1,0,2.614,2.614c0-.082,0-.163-.012-.244L16,12.639l.357.357A2.175,2.175,0,0,1,16.356,16.067Zm-3.8-2.349a1.743,1.743,0,0,1,0,2.464h0a1.786,1.786,0,0,1-2.464,0,1.743,1.743,0,0,1,2.464-2.465Zm1.091.036a2.606,2.606,0,0,0-1.127-1.127l7.952-7.952L21.6,5.8ZM25.089,3.188l-2,2a.63.63,0,0,1-.871,0L21.093,4.059a.616.616,0,0,1,0-.871l2-2a.616.616,0,0,1,.871,0h0l1.127,1.126A.616.616,0,0,1,25.089,3.188Z" transform="translate(0 -0.153)" fill="#f2f2f2"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <input type="text" name="instrument" placeholder="Instrument">
-                </div>
-                <div class="select">
-                    <svg id="Groupe_809" data-name="Groupe 809" xmlns="http://www.w3.org/2000/svg" width="22.422" height="22.422" viewBox="0 0 22.422 22.422">
-                        <g id="Groupe_808" data-name="Groupe 808">
-                            <circle id="Ellipse_2584" data-name="Ellipse 2584" cx="1" cy="1" r="1" transform="translate(16.211 8.211)" fill="#f2f2f2"/>
-                            <path id="Tracé_141" data-name="Tracé 141" d="M18.919,1.752H17.78V.876a.876.876,0,0,0-1.752,0v.876H12.043V.876a.876.876,0,0,0-1.752,0v.876H6.35V.876A.876.876,0,0,0,4.6.876v.876H3.5A3.507,3.507,0,0,0,0,5.255V18.919a3.507,3.507,0,0,0,3.5,3.5h6.7a.876.876,0,0,0,0-1.752H3.5a1.754,1.754,0,0,1-1.752-1.752V5.255A1.754,1.754,0,0,1,3.5,3.5H4.6v.876a.876.876,0,0,0,1.752,0V3.5h3.941v.876a.876.876,0,0,0,1.752,0V3.5h3.985v.876a.876.876,0,0,0,1.752,0V3.5h1.139a1.754,1.754,0,0,1,1.752,1.752v4.992a.876.876,0,1,0,1.752,0V5.255A3.507,3.507,0,0,0,18.919,1.752Z" fill="#f2f2f2"/>
-                            <path id="Tracé_142" data-name="Tracé 142" d="M275.3,270a5.3,5.3,0,1,0,5.3,5.3A5.3,5.3,0,0,0,275.3,270Zm0,8.846a3.547,3.547,0,1,1,3.547-3.547A3.551,3.551,0,0,1,275.3,278.846Z" transform="translate(-258.176 -258.176)" fill="#f2f2f2"/>
-                            <path id="Tracé_143" data-name="Tracé 143" d="M373.146,331.8h-.394v-.92a.876.876,0,1,0-1.752,0v1.8a.876.876,0,0,0,.876.876h1.27a.876.876,0,1,0,0-1.752Z" transform="translate(-354.753 -315.548)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2585" data-name="Ellipse 2585" cx="1" cy="1" r="1" transform="translate(12.211 8.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2586" data-name="Ellipse 2586" cx="1" cy="1" r="1" transform="translate(8.211 12.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2587" data-name="Ellipse 2587" cx="1" cy="1" r="1" transform="translate(4.211 8.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2588" data-name="Ellipse 2588" cx="1" cy="1" r="1" transform="translate(4.211 12.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2589" data-name="Ellipse 2589" cx="1" cy="1" r="1" transform="translate(4.211 16.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2590" data-name="Ellipse 2590" cx="1" cy="1" r="1" transform="translate(8.211 16.211)" fill="#f2f2f2"/>
-                            <circle id="Ellipse_2591" data-name="Ellipse 2591" cx="1" cy="1" r="1" transform="translate(8.211 8.211)" fill="#f2f2f2"/>
-                        </g>
-                    </svg>
-                    <input type="number" name="yearOfPractise" min="1" max="100" placeholder="Année.s de pratique" required>
-                </div>
-                <div class="back">
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="10.591" height="18.643" viewBox="0 0 10.591 18.643">
-                        <path id="Tracé_152" data-name="Tracé 152" d="M-7.266,0l-9.385,8.615,9.385,8.615" transform="translate(17.151 0.706)" fill="none" stroke="#009380" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                    </svg>
-                    <p>Modifier mes informations</p>
-                </div>
-                <div class="field input">
-                    <svg id="badge" xmlns="http://www.w3.org/2000/svg" width="21.565" height="29.56" viewBox="0 0 21.565 29.56">
-                        <path id="Tracé_144" data-name="Tracé 144" d="M21.024,9.273,19.636,7.589a1.489,1.489,0,0,1-.335-.809l-.209-2.172a2.378,2.378,0,0,0-2.135-2.135l-2.172-.209a1.493,1.493,0,0,1-.809-.335L12.292.541a2.378,2.378,0,0,0-3.02,0L7.589,1.929a1.491,1.491,0,0,1-.809.335l-2.172.209A2.378,2.378,0,0,0,2.473,4.609L2.264,6.781a1.493,1.493,0,0,1-.335.809L.541,9.273a2.378,2.378,0,0,0,0,3.02l1.388,1.684a1.493,1.493,0,0,1,.335.809l.209,2.172a2.378,2.378,0,0,0,2.135,2.135l1.328.128L2.782,26.758a.575.575,0,0,0,.686.774L6.2,26.759a.025.025,0,0,1,.029.011L7.6,29.263a.569.569,0,0,0,.5.3h.03a.572.572,0,0,0,.5-.352l3.33-7.959a2.366,2.366,0,0,0,.325-.225l1.684-1.388a1.489,1.489,0,0,1,.74-.326l3.016,7.207-2.135-.6a.9.9,0,0,0-1.035.433L13.5,28.292l-1.416-3.384a.438.438,0,1,0-.809.338l1.659,3.964a.571.571,0,0,0,.5.35h.03a.57.57,0,0,0,.5-.3l1.37-2.492a.025.025,0,0,1,.029-.012l2.736.773a.575.575,0,0,0,.686-.774L15.629,19.22l1.328-.128a2.378,2.378,0,0,0,2.135-2.135l.209-2.172a1.489,1.489,0,0,1,.335-.808l1.388-1.684a2.377,2.377,0,0,0,0-3.02ZM8.07,28.292,7,26.348a.9.9,0,0,0-1.035-.432l-2.134.6,3.016-7.207a1.49,1.49,0,0,1,.741.326l1.684,1.388a2.369,2.369,0,0,0,1.51.541l.1,0ZM20.348,11.735,18.96,13.419a2.364,2.364,0,0,0-.531,1.282l-.209,2.172a1.5,1.5,0,0,1-1.347,1.347l-1.908.184-.023,0-.242.023a2.365,2.365,0,0,0-1.282.531l-1.684,1.388a1.5,1.5,0,0,1-1.9,0L8.147,18.96a2.363,2.363,0,0,0-1.282-.531l-.243-.023-.02,0L4.693,18.22a1.5,1.5,0,0,1-1.347-1.347L3.137,14.7a2.364,2.364,0,0,0-.531-1.282L1.218,11.735a1.5,1.5,0,0,1,0-1.9L2.606,8.147a2.364,2.364,0,0,0,.531-1.282l.209-2.172A1.5,1.5,0,0,1,4.693,3.346l2.172-.209a2.365,2.365,0,0,0,1.282-.531L9.831,1.218a1.5,1.5,0,0,1,1.9,0l1.684,1.388a2.363,2.363,0,0,0,1.282.531l2.172.209A1.5,1.5,0,0,1,18.22,4.692l.209,2.172a2.364,2.364,0,0,0,.531,1.282l1.388,1.684a1.5,1.5,0,0,1,0,1.9Zm0,0" transform="translate(0 0)" fill="#f2f2f2"/>
-                        <path id="Tracé_145" data-name="Tracé 145" d="M75,68.156a6.917,6.917,0,0,0-.876.055.438.438,0,0,0,.111.87A6.039,6.039,0,0,1,75,69.032a5.966,5.966,0,1,1-2.443.521.438.438,0,0,0-.359-.8,6.851,6.851,0,1,0,2.8-.6Zm0,0" transform="translate(-64.221 -64.221)" fill="#f2f2f2"/>
-                        <path id="Tracé_146" data-name="Tracé 146" d="M104.963,134.6a1.342,1.342,0,0,0,0,1.9l1.914,1.915a1.341,1.341,0,0,0,1.9,0l4.179-4.179a1.34,1.34,0,0,0-1.9-1.9l-3.231,3.232-.967-.967a1.342,1.342,0,0,0-1.9,0Zm2.862,2.025a.438.438,0,0,0,.31-.129l3.541-3.541a.464.464,0,1,1,.656.656l-4.179,4.179a.464.464,0,0,1-.656,0l-1.915-1.914a.464.464,0,0,1,.656-.656l1.277,1.277A.438.438,0,0,0,107.825,136.628Zm0,0" transform="translate(-98.534 -124.329)" fill="#f2f2f2"/>
-                    </svg>
-                    <input type="text" name="profil" placeholder="Profil">
-                </div>
-                <div class="field input inputbio">
-                    <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="26.431" height="26.298" viewBox="0 0 26.431 26.298">
-                        <path id="Tracé_136" data-name="Tracé 136" d="M24.395,53.114a.658.658,0,0,0-.658.658v5.845a1.977,1.977,0,0,1-1.975,1.975H3.291a1.977,1.977,0,0,1-1.975-1.975V42.463a1.977,1.977,0,0,1,1.975-1.975H9.136a.658.658,0,1,0,0-1.317H3.291A3.3,3.3,0,0,0,0,42.463V59.617a3.3,3.3,0,0,0,3.291,3.291h18.47a3.3,3.3,0,0,0,3.291-3.291V53.772A.658.658,0,0,0,24.395,53.114Zm0,0" transform="translate(0 -36.611)" fill="#f2f2f2"/>
-                        <path id="Tracé_137" data-name="Tracé 137" d="M125.86,1.128a2.962,2.962,0,0,0-4.189,0L109.927,12.872a.658.658,0,0,0-.169.29l-1.544,5.575a.658.658,0,0,0,.81.81L114.6,18a.658.658,0,0,0,.29-.169L126.633,6.09a2.965,2.965,0,0,0,0-4.189ZM111.362,13.3l9.611-9.612,3.1,3.1L114.461,16.4Zm-.619,1.242,2.476,2.477-3.426.949ZM125.7,5.159l-.7.7-3.1-3.1.7-.7a1.646,1.646,0,0,1,2.327,0l.773.772A1.648,1.648,0,0,1,125.7,5.159Zm0,0" transform="translate(-101.068 -0.261)" fill="#f2f2f2"/>
-                    </svg>
-                    <textarea name="bio" id="bio" placeholder="Biographie"></textarea>
-                </div>
-                <div class="field button">
-                    <a href="feed.php" rel="noopener">
-                        <input type="submit" class="ctaform" name="submit2" value="C'est parti">
-                    </a>
-                </div>
-            </form>
-        </div>
     </div>
 </header>
 
-<script>
-    const loader = document.querySelector('.loader');
-    window.addEventListener('load', () => {
-        loader.classList.add('disparition');
-    })
-</script>
+
 <script>
     const pswrdField = document.querySelector(".inputdeux input[type='password']");
     const pswrdField2 = document.querySelector(".inputtrois input[type='password']");
