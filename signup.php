@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
                         $erreurmail = "Adresse mail déjà utilisée";
                     }
                 }else{
-                    $erreurmailcorrect = "Adresse mail pas correct";
+                    $erreurmailcorrect = "Adresse mail pas correcte";
                 }
             }else{
                 $erreurusername = "Nom d'utilisateur déjà utilisé";

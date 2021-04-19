@@ -36,7 +36,6 @@ if (isset($_POST['submitconnect'])){
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -478,7 +477,6 @@ if (isset($_POST['submitconnect'])){
                     </svg>
                     <input type="email" name="mailconnect" value="<?php if (isset($mailconnect)) {echo $mailconnect;}?>" placeholder="Adresse mail" autofocus required>
                 </div>
-
                 <div class="field input inputdeux">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21.082" height="27.074" viewBox="0 0 21.082 27.074">
                         <g id="icon_cadena" data-name="icon cadena" transform="translate(0 0.5)">

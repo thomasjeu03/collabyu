@@ -22,7 +22,7 @@ if (isset($_POST['submit2'])) {
             $_SESSION['user_id_USERS'] = $userinfo['user_id_USERS'];
             $_SESSION['user_username_USERS'] = $userinfo['user_username_USERS'];
             $_SESSION['user_mail_USERS'] = $userinfo['user_mail_USERS'];
-            header("Location: home.php?user_id_USERS=".$getid);
+            header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
         }else{
             $erreur = "Adresse mail ou mot de passe incorrect";
         }
@@ -33,7 +33,7 @@ if (isset($_POST['submit2'])) {
 
 if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
 {
-    $getid = intval($_GET['user_id_USERS']);
+    $getid = intval($_SESSION['user_id_USERS']);
     $requser = $bdd->prepare('SELECT * FROM users WHERE user_id_USERS = ?');
     $requser->execute(array($getid));
     $userinfo = $requser->fetch();

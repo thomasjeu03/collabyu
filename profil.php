@@ -47,11 +47,11 @@ $userinfo = $requser->fetch();
 </div>
 <header>
     <div class="nav">
-        <a href="home.php" rel="noopener" class="logo">
+        <a href="home.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="logo">
             <img src="img/logo%20collabyU.svg" alt="Logo CollabyU">
             <h1>CollabyU</h1>
         </a>
-        <a href="home.php" rel="noopener" class="btnhome">
+        <a href="home.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="btnhome">
             <svg xmlns="http://www.w3.org/2000/svg" width="23.724" height="22.24" viewBox="0 0 23.724 22.24">
                 <g id="home" transform="translate(-0.001 -16.014)">
                     <path id="Tracé_8" data-name="Tracé 8" d="M23.507,26.236l-9.22-9.22a3.433,3.433,0,0,0-4.85,0l-9.22,9.22a.741.741,0,1,0,1.048,1.049l.588-.588v9.425a2.131,2.131,0,0,0,2.131,2.131H7.692a.463.463,0,0,0,.463-.463V30.932a2.317,2.317,0,0,1,2.317-2.317h2.78a2.317,2.317,0,0,1,2.317,2.317V37.79a.463.463,0,0,0,.463.463h3.707a2.131,2.131,0,0,0,2.131-2.131V26.7l.588.588a.741.741,0,1,0,1.048-1.049Z" fill="#f2f2f2"/>
@@ -59,7 +59,7 @@ $userinfo = $requser->fetch();
             </svg>
             <p>Accueil</p>
         </a>
-        <a href="search.php" rel="noopener" class="btnsearch">
+        <a href="search.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="btnsearch">
             <svg xmlns="http://www.w3.org/2000/svg" width="21.784" height="22.225" viewBox="0 0 21.784 22.225">
                 <g id="loupe" transform="translate(-348.216 -121)">
                     <path id="Tracé_5" data-name="Tracé 5" d="M353.691,133.565l-5.992,5.992" transform="translate(4.093 0.093)" fill="none" stroke="#009380" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
@@ -72,7 +72,7 @@ $userinfo = $requser->fetch();
             </svg>
             <p>Recherche</p>
         </a>
-        <a href="message.php" rel="noopener" class="btnmessage">
+        <a href="message.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="btnmessage">
             <svg id="logo_message" data-name="logo message" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20">
                 <g id="Soustraction_1" data-name="Soustraction 1" transform="translate(0 0)" fill="none">
                     <path d="M12.174,13H6.5a6.5,6.5,0,0,1,0-13h6A6.507,6.507,0,0,1,19,6.5V8h-.5a6.474,6.474,0,0,0-6.326,5Z" stroke="none"/>
@@ -86,11 +86,11 @@ $userinfo = $requser->fetch();
             </svg>
             <p>Messages</p>
         </a>
-        <a href="profil.php" rel="noopener" class="btnprofil">
-            <img src="img/PP.jpg" alt="photo_de_profil" width="30" height="30">
+        <a href="profil.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="btnprofil">
+            <img src="img/pp.png" alt="photo_de_profil" width="30" height="30">
             <p>Profil</p>
         </a>
-        <a href="settings.php" rel="noopener" class="btnsettings">
+        <a href="setting.php?user_id_USERS=<?php echo $_SESSION['user_id_USERS'];?>" rel="noopener" class="btnsettings">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3">
                 <g id="paramètre" transform="translate(-341 -348)">
                     <path id="Rectangle_4" data-name="Rectangle 4" d="M1.5,0H6A0,0,0,0,1,6,0V1.5A1.5,1.5,0,0,1,4.5,3h-3A1.5,1.5,0,0,1,0,1.5v0A1.5,1.5,0,0,1,1.5,0Z" transform="translate(341 348)" fill="#ec1d53"/>
@@ -108,7 +108,7 @@ $userinfo = $requser->fetch();
     <?php if (isset($_SESSION['user_id_USERS']) AND $userinfo['user_id_USERS'] == $_SESSION['user_id_USERS'])
     {
     ?>
-        <a href="#">Modifier mon profil</a>
+        <p>Modifier mon profil</p>
     <?php
     }
     ?>
