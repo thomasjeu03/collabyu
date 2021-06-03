@@ -710,6 +710,18 @@ a{
     }
 }
 @media only screen and (max-width: 1240px){
+
+    .section3{
+        height: auto;
+        padding: 60px 0;
+    }
+    .section3>.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
     .section5>.container{
         height: auto;
         width: 100%;
@@ -718,7 +730,140 @@ a{
         align-items: center;
         justify-content: center;
     }
+    .argument{
+        margin: 35px 0;
+    }
     .biographie{
         margin: 50px 0;
+    }
+}
+@media only screen and (max-width: 1180px){
+    .rectangleun {
+        position: absolute;
+        left: -830px;
+    }
+    body{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+    }
+    #section1>.haut{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    #section1>.haut>.left{
+        margin-bottom: 100px;
+        align-items: center;
+        text-align: center;
+    }
+    #section2>.texte{
+        width: 100%;
+    }
+    #section2>.texte>.droite{
+        justify-content: flex-start;
+    }
+    .section3{
+        width: 100%;
+        padding: 0 26px;
+    }
+    .section3>.container{
+        width: 100%;
+    }
+    #section4>.container>.haut{
+        font-size: 18px;
+    }
+    .section5>.container{
+        width: 100%;
+        padding: 0 26px;
+    }
+}
+@media only screen and (max-width: 1060px){
+    .shape, .grille2points3{
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px){
+    #section1>.haut>.left{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .logoetnom{
+        transform: scale(0.7) translateY(50px);
+    }
+    .slogan{
+        font-size: 35px;
+        line-height: 40px;
+        width: 100%;
+    }
+    .grille2points1, .grille2points, .grille2points3{
+        display: none;
+    }
+    .shape{
+        overflow: hidden;
+        display: none;
+    }
+    .section2{
+        height: auto;
+        width: 100%;
+        padding: 50px 26px;
+    }
+    .section2>h1, .section4>h1{
+        display: none;
+    }
+    .section2>.texte{
+        height: 100%;
+        width: 100%;
+    }
+    .section2>.texte>.gauche{
+        margin-bottom: 35px;
+    }
+    #section2>.texte>.gauche>p, #section2>.texte>.droite>p{
+        padding: 22px 26px;
+        height: auto;
+        border-radius: 20px;
+    }
+    .section3{
+        width: 100%;
+        padding: 0 26px;
+    }
+    .section3>.container{
+        width: 100%;
+    }
+    .section4{
+        width: 100%;
+        height: auto;
+    }
+    .section4>.container{
+        padding: 20px 26px;
+        width: 100%;
+        height: auto;
+    }
+    .section4>.container>.haut{
+        margin-bottom: 30px;
+    }
+    .section4>.container>.haut>p{
+        width: 100%;
+        font-size: 18px;
+        padding: 22px 26px;
+        border-radius: 20px;
+    }
+    .section4>.container>.bas>img{
+        width: 100%;
+    }
+    .section5>.container{
+        width: 100%;
+        padding: 0 26px;
+    }
+    .biographie{
+        width: 100%;
+    }
+    .tete {
+        transform: scale(0.8);
+    }
+    .logo-mmi{
+        display: none;
     }
 }

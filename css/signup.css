@@ -12,10 +12,16 @@
     width: 0;
     height: 0;
     background-color: #1A2537;
+    transition: 0.3s ease-in-out;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(0deg, #EC1D53, #009380);
+    background: rgba(242,242,242, 0.9);
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(242,242,242, 0.7);
+    transition: 0.3s ease-in-out;
 }
 *{
     margin: 0;
@@ -260,6 +266,10 @@ textarea{
 .checkbox{
     width: 44%;
     transform: translateX(7px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .checkbox > input {
     margin: 0;
@@ -270,6 +280,17 @@ textarea{
     font-size: 12px;
     font-family: Roboto;
     font-weight: lighter;
+}
+.choosefile{
+    display: flex;
+    position: absolute;
+    top: 320px;
+    rigth: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 .ctaform{
     height: 64px;
@@ -304,10 +325,13 @@ textarea{
     height: 64px;
     width: 100%;
 }
-a{
+.a{
     transition: 0.4s ease-in-out;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #F2F2F2;
 }
-.card a:hover{
+.a:hover{
     border-bottom: 1px solid #009380;
 }
 p{
@@ -329,12 +353,7 @@ p{
     flex-direction: row;
     justify-content: flex-start;
 }
-.arrow{
-    transition: 0.4s ease-in-out;
-}
-.back:hover .arrow{
-    transform: translateX(-5px);
-}
+
 .carddeux{
     width: 815px;
     height: 654px;
@@ -358,6 +377,44 @@ p{
     display: none;
 }
 
+.CGU{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #1A2537;
+}
+.CGUdisplayblock{
+    display: none;
+}
+.centreCGU{
+    margin-top: 40px;
+    width: 1000px;
+    text-align: left;
+    padding: 0;
+}
+.CGU p{
+    text-align: left;
+}
+.retour{
+    cursor: pointer;
+    background-color: #EC1D53;
+    width: auto;
+    padding: 4px 20px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    transition: 0.3s ease-in-out;
+}
+.retour:hover{
+    color: #EC1D53;
+    background-color: #F2F2F2;
+}
+i{
+    position: relative;
+    cursor: auto;
+}
+
 @media only screen and (max-width: 1400px){
     .card{
         position: absolute;
@@ -376,5 +433,102 @@ p{
         right: 0;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+    }
+}
+@media only screen and (max-width: 1080px){
+    .centreCGU{
+        width: 100%;
+        padding: 0 26px;
+    }
+}
+@media only screen and (max-width: 840px){
+    .card {
+        width: calc(100% - 52px);
+        height: calc(100vh - 150px);
+        padding: 30px;
+        position: absolute;
+        margin-right: auto;
+        overflow-y: auto;
+        margin-left: auto;
+        top: 30px;
+        right: 0;
+        left: 50%;
+        transform: translateY(0) translateX(-50%);
+    }
+    .card>form{
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        bottom: 20px;
+        z-index: 2;
+    }
+    .field{
+        width: 100%;
+    }
+    .input input{
+        width: 100%;
+    }
+    .g-recaptcha{
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .checkbox{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .ctaform{
+        height: 50px;
+        width: calc(100% - 50px);
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+@media only screen and (max-width: 375px){
+    h1{
+        font-size: 26px;
+    }
+    a>p{
+        font-family: Roboto;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        font-weight: 400;
+    }
+    .card>form{
+        margin-top: 0;
+    }
+    .g-recaptcha{
+        transform: scale(0.9);
+    }
+    p{
+        font-size: 12px;
+        line-height: 12px;
+        font-family: Roboto;
+        text-align: right;
     }
 }

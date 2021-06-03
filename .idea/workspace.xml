@@ -11,11 +11,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3dfde08-8adb-46c5-b51d-08ef45800843" name="Default Changelist" comment="test2">
-      <change afterPath="$PROJECT_DIR$/img/pp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configPDO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/mentions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/messagerie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Union 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Union 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/camera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/carot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo collabyU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo_flat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nous3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mentions_legales.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/bigsearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/bigsearchData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/data-collami.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/data-message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/get-chat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621058995maxou.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621066426Kipsteam_faker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/162126725659f878df3cec115efb362393.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621341631simon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621341814pracht.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621342153pracht.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621342660chasuble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621343332Kipsteam_faker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621344003melanchon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621344197Z.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16213444861620219953389.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621346695jxrz4c53l3s51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621356558unknown (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621469926batman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16214699551621469926batman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621470030joker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621470258robin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16214702961621470258robin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621470400batman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621523108paul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621523156paul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16215232121621523156paul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16215233391621346695jxrz4c53l3s51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/16215233681621523156paul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621525643162126725659f878df3cec115efb362393.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621540762pat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621581641edi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621796323PPancienne.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621853894François I.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854015BP9Jt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854034imagen-minecraft-trial-0thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854352BP9Jt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854365logo-nasa-1975.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854388imagen-minecraft-trial-0thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621854412François I.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621878019EJWUrJfUEAATheZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621878072presse-papier04-4637315.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621881607unknown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/1621957277P1060716.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/batman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/edi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/emma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/joker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/lou.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/martin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/pascal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/pat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/paul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/pp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/robin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/images/unn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/insert-chat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/search-collami.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/search-message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/accueil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/custom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/PP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
@@ -32,8 +123,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,8 +149,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.splitter.proportion" value="0.23174293" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\Github\collabyu\js" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,7 +213,74 @@
       <workItem from="1618566416815" duration="14531000" />
       <workItem from="1618643773412" duration="7680000" />
       <workItem from="1618694321758" duration="220000" />
-      <workItem from="1618849650057" duration="2169000" />
+      <workItem from="1618849650057" duration="2464000" />
+      <workItem from="1619283846734" duration="5593000" />
+      <workItem from="1619356369181" duration="5000" />
+      <workItem from="1619511017557" duration="20000" />
+      <workItem from="1619765858317" duration="6000" />
+      <workItem from="1619766106831" duration="4000" />
+      <workItem from="1619946736342" duration="743000" />
+      <workItem from="1620029150860" duration="608000" />
+      <workItem from="1620042671078" duration="1539000" />
+      <workItem from="1620133130885" duration="6210000" />
+      <workItem from="1620161537783" duration="7669000" />
+      <workItem from="1620194748174" duration="9950000" />
+      <workItem from="1620367835442" duration="34000" />
+      <workItem from="1620369988384" duration="71000" />
+      <workItem from="1620374946508" duration="601000" />
+      <workItem from="1620387689370" duration="389000" />
+      <workItem from="1620713173443" duration="14632000" />
+      <workItem from="1620756675177" duration="7261000" />
+      <workItem from="1620912565192" duration="11720000" />
+      <workItem from="1620938397811" duration="78000" />
+      <workItem from="1620978069146" duration="13000" />
+      <workItem from="1620993023831" duration="710000" />
+      <workItem from="1620993889000" duration="4897000" />
+      <workItem from="1621006554252" duration="10890000" />
+      <workItem from="1621058819459" duration="9827000" />
+      <workItem from="1621072000309" duration="13626000" />
+      <workItem from="1621103330340" duration="1206000" />
+      <workItem from="1621158817143" duration="7814000" />
+      <workItem from="1621191174245" duration="389000" />
+      <workItem from="1621266903981" duration="9324000" />
+      <workItem from="1621331876773" duration="7802000" />
+      <workItem from="1621354170522" duration="763000" />
+      <workItem from="1621424358965" duration="656000" />
+      <workItem from="1621444598832" duration="11703000" />
+      <workItem from="1621498127862" duration="3162000" />
+      <workItem from="1621522833523" duration="4054000" />
+      <workItem from="1621533420498" duration="1163000" />
+      <workItem from="1621540704705" duration="4654000" />
+      <workItem from="1621577265409" duration="164000" />
+      <workItem from="1621580917900" duration="7371000" />
+      <workItem from="1621625590672" duration="2107000" />
+      <workItem from="1621663697685" duration="11016000" />
+      <workItem from="1621684539047" duration="367000" />
+      <workItem from="1621704892587" duration="10468000" />
+      <workItem from="1621768157057" duration="3876000" />
+      <workItem from="1621844716064" duration="12471000" />
+      <workItem from="1621961576372" duration="680000" />
+      <workItem from="1621965623718" duration="47000" />
+      <workItem from="1621966034190" duration="885000" />
+      <workItem from="1622017860509" duration="42000" />
+      <workItem from="1622017958220" duration="8176000" />
+      <workItem from="1622133858455" duration="2644000" />
+      <workItem from="1622149482648" duration="41000" />
+      <workItem from="1622149655055" duration="15000" />
+      <workItem from="1622214807190" duration="3906000" />
+      <workItem from="1622268255364" duration="4063000" />
+      <workItem from="1622277946728" duration="15334000" />
+      <workItem from="1622406754089" duration="10840000" />
+      <workItem from="1622450163193" duration="15938000" />
+      <workItem from="1622478810321" duration="616000" />
+      <workItem from="1622546224924" duration="8000" />
+      <workItem from="1622582431507" duration="731000" />
+      <workItem from="1622642215142" duration="3175000" />
+      <workItem from="1622646230799" duration="8000" />
+      <workItem from="1622652685803" duration="10039000" />
+      <workItem from="1622671327527" duration="1280000" />
+      <workItem from="1622673657431" duration="4316000" />
+      <workItem from="1622727311647" duration="1004000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1616855832322</created>
@@ -168,25 +333,40 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="536" y="170" key="#SSH_Configurations/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616780402877" />
+    <state x="0" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622413111106">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="0" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622413111106" />
     <state x="760" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1618043896594">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="760" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1618043896594" />
-    <state x="740" y="267" key="FileChooserDialogImpl" timestamp="1617091519299">
+    <state x="740" y="267" key="FileChooserDialogImpl" timestamp="1621071584941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1617091519299" />
-    <state x="-823" y="-19" key="NewPhpFileDialog" timestamp="1618598489101">
+    <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1621071584941" />
+    <state x="291" y="431" key="Github.CreateGistDialog" timestamp="1622417584274">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="291" y="431" key="Github.CreateGistDialog/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622417584274" />
+    <state x="504" y="317" key="NewPhpFileDialog" timestamp="1622417425529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1619283959676" />
+    <state x="504" y="317" key="NewPhpFileDialog/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622417425529" />
+    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471267668" />
+    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1622269164234" />
+    <state x="-1079" y="-563" width="1044" height="1277" key="SettingsEditor" timestamp="1621707769065">
       <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
-    <state x="-823" y="-19" key="NewPhpFileDialog/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618598489101" />
-    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471267668" />
-    <state x="457" y="452" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1618044721951" />
-    <state x="461" y="170" width="1242" height="709" key="SettingsEditor" timestamp="1617091528328">
+    <state x="-1079" y="-563" width="1044" height="1277" key="SettingsEditor/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1621707769065" />
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1620923593059" />
+    <state x="461" y="170" width="1242" height="709" key="SettingsEditor/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617044034488" />
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1621071526029" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1621162934159">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="170" width="1242" height="709" key="SettingsEditor/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617044034488" />
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1617091528328" />
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1621162934159" />
     <state x="-816" y="-369" key="Vcs.Push.Dialog.v2" timestamp="1618493443005">
       <screen x="-1080" y="-833" width="1080" height="1890" />
     </state>
@@ -194,17 +374,38 @@
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1080.-833.1080.1890@0.0.1920.1050" timestamp="1618433923739" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856074625" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1617003648864" />
-    <state x="169" y="-9" width="1055" height="1137" maximized="true" key="dock-window-1" timestamp="1618657757842">
+    <state x="1087" y="0" width="840" height="1057" key="dock-window-1" timestamp="1622657987665">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="169" y="-9" width="1055" height="1137" maximized="true" key="dock-window-1/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618657757842" />
+    <state x="164" y="4" width="1055" height="1137" maximized="true" key="dock-window-1/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1621853069287" />
+    <state x="973" y="0" width="954" height="1057" key="dock-window-1/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622412246908" />
+    <state x="927" y="42" width="758" height="1046" key="dock-window-1/0.0.1920.1050/1920.136.1920.1050@1920.136.1920.1050" timestamp="1622372677840" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617471348863" />
-    <state x="1100" y="0" width="745" height="1030" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1617958695163" />
-    <state x="155" y="-12" width="1055" height="1137" maximized="true" key="dock-window-2" timestamp="1618657934043">
+    <state x="1087" y="0" width="840" height="1057" key="dock-window-1/0.0.1920.1050/1920.283.1920.1050@0.0.1920.1050" timestamp="1622657987665" />
+    <state x="1144" y="0" width="621" height="1027" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1622273282452" />
+    <state x="955" y="3" width="906" height="1037" key="dock-window-2" timestamp="1622417703009">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="155" y="-12" width="1055" height="1137" maximized="true" key="dock-window-2/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618657934043" />
+    <state x="871" y="20" width="719" height="1037" key="dock-window-2/0.0.1920.1050/-1080.-833.1080.1890@0.0.1920.1050" timestamp="1619287685888" />
+    <state x="955" y="3" width="906" height="1037" key="dock-window-2/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622417703009" />
     <state x="953" y="0" width="974" height="1057" key="dock-window-2/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1616856546378" />
+    <state x="953" y="0" width="974" height="1057" key="dock-window-2/0.0.1920.1050@0.0.1920.1050" timestamp="1621674901139" />
+    <state x="953" y="0" width="974" height="1057" key="dock-window-3" timestamp="1621675000712">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="923" y="0" width="951" height="1037" key="dock-window-3/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1621287580635" />
+    <state x="953" y="0" width="974" height="1057" key="dock-window-3/0.0.1920.1050@0.0.1920.1050" timestamp="1621675000712" />
+    <state x="1100" y="0" width="836" height="1037" key="dock-window-4" timestamp="1621288407199">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1100" y="0" width="836" height="1037" key="dock-window-4/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1621288407199" />
+    <state x="872" y="66" width="608" height="867" key="find.popup" timestamp="1622280434769">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1075" y="-662" width="578" height="1561" key="find.popup/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1621878258255" />
+    <state x="9" y="95" width="608" height="867" key="find.popup/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1621542337059" />
+    <state x="872" y="66" width="608" height="867" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1622280434769" />
     <state x="961" y="255" key="ftp.server.browser" timestamp="1616780436943">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -213,11 +414,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="838" y="399" width="631" height="507" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617091527184" />
-    <state x="-1079" y="-388" key="run.anything.popup" timestamp="1618499130268">
-      <screen x="-1080" y="-833" width="1080" height="1890" />
+    <state x="2" y="247" key="run.anything.popup" timestamp="1622280531433">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1079" y="-388" key="run.anything.popup/0.0.1920.1050/-1080.-833.1080.1890@-1080.-833.1080.1890" timestamp="1618499130268" />
+    <state x="2" y="247" key="run.anything.popup/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1622071475790" />
     <state x="2" y="247" key="run.anything.popup/0.0.1920.1050/1920.266.1920.1050@0.0.1920.1050" timestamp="1617979341102" />
-    <state x="2" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1618047512777" />
+    <state x="2" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1622280531433" />
+    <state x="204" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1621581516034">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="204" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.136.1920.1050@0.0.1920.1050" timestamp="1621545558163" />
+    <state x="204" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1621581516034" />
   </component>
 </project>

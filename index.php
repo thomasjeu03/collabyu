@@ -8302,7 +8302,7 @@
         </div>
         <div class="lien_footer">
             <a href="http://mmimontbeliard.com/" rel="noopener" target="_blank">Projet réalisé dans un cadre pédagogique au département MMI de l’IUT de Montbéliard</a>
-            <a href="mentions_legales" rel="noopener">Copyright 2021-2022 - collabyu.thomasjeu.fr - Tous droits réservés - Mentions légales</a>
+            <a href="mentions_legales.html" rel="noopener">Copyright 2021-2022 - collabyu.thomasjeu.fr - Tous droits réservés - Mentions légales</a>
         </div>
     </div>
     <a class="logo-mmi" href="http://mmimontbeliard.com/" target="_blank" rel="noopener"><img src="img/MMI_dut_small_white.png" alt="logo du département MMI de Montbéliard"></a>

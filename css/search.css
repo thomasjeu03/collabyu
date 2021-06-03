@@ -1,0 +1,409 @@
+@font-face {
+    font-family: "Gotham Black";
+    src: url("../font/GothamBold.ttf") format("truetype");
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../font/GothamBook.ttf") format("truetype");
+    font-style: normal;
+}
+::-webkit-scrollbar{
+    width: 8px;
+    height: 0;
+    background-color: #1A2537;
+    transition: 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(242,242,242, 0.9);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(242,242,242, 0.7);
+    transition: 0.3s ease-in-out;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+img{
+    object-fit: cover;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    display: flex;
+    color: #F2F2F2;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #1A2537;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    display: flex;
+    color: #F2F2F2;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #1A2537;
+}
+header{
+    width: calc((100% - 577px) / 2);
+    height: 100vh;
+    display: flex;
+    transform: translateX(-73px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.nav{
+    position: relative;
+    width: 274px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 356px;
+    padding: 34px 54px;
+    border: #009380 1px solid;
+    border-radius: 42px 0 42px 42px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+    6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+h1{
+    display: none;
+}
+.h2{
+    font-family: "Gotham";
+    font-size: 13.33px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-332px);
+    line-height: 20px;
+    height: 80px;
+    width: 525px;
+    padding: 26px 0;
+    z-index: 50;
+    background: linear-gradient(#1A2537FF 75%, #1A253700);
+}
+a{
+    text-decoration: none;
+    color: #F2F2F2;
+    transition: 0.3s ease-in-out;
+}
+.nav a:nth-of-type(3){
+    color: #EC1D53;
+    font-weight: 600;
+}
+.nav a:nth-of-type(5) img{
+    border-radius: 50%;
+    border: #EC1D53 1px solid;
+    outline: none;
+}
+.nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    font-family: "Gotham";
+    transition: 0.3s ease-in-out;
+}
+.nav a:hover{
+    color: #EC1D53;
+    font-weight: 600;
+}
+.nav a p{
+    position: absolute;
+    left: 46px;
+}
+
+
+main{
+    width: 577px;
+    min-height: 100vh;
+    max-height: auto;
+    padding: 50px 30px 30px 30px;
+    transform: translateX(-73px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: #009380 solid 1px;
+    border-right: #009380 solid 1px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+    6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+.liste{
+    width: 100%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cardProfil{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    z-index: 5;
+    border: #F2F2F2 solid 1px;
+}
+.cardProfil .left img{
+    border: #F2F2F2 1px solid;
+    border-radius: 50%;
+}
+.cardProfil .left{
+    width: 55%;
+    padding: 22px;
+}
+.cardProfil .left>*{
+    margin-bottom: 10px;
+}
+.musicalGenre{
+    margin-bottom: 0;
+}
+.cardProfil .left .id {
+    display: flex;
+    height: 60px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.cardIdRight{
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cardProfil .left .id a:first-of-type{
+    width: 60px;
+    height: 60px;
+}
+.localisation p{
+    margin-left: 7px;
+}
+.musicalGenreListe>p, .instrumentListe>p{
+    margin-right: 7px;
+    height: auto;
+    width: auto;
+    border-radius: 15px 15px 0 15px;
+    background-color: #F2F2F2;
+    padding: 3px 10px;
+    margin-top: 5px;
+    color: #1A2537;
+}
+.localisation, .instrumentListe, .musicalGenreListe{
+    display: flex;
+    flex-flow: wrap row;
+}
+.copyrightlink{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.copyrightlink:hover{
+    color: #EC1D53;
+}
+.cardProfil .right{
+    border-left: #F2F2F2 solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 45%;
+    border-radius: 0 42px 42px 0;
+}
+
+aside{
+    width: calc((100% - 577px) / 2);
+    height: 100vh;
+    transform: translateX(-73px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.searchAside{
+    position: relative;
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+    padding: 0 24px;
+    border: #009380 1px solid;
+    border-radius: 0 42px 42px 42px;
+    box-shadow: -6px -3px 30px rgb(255, 255, 255, 0.05),
+    6px 3px 30px rgb(0, 0, 0, 0.33);
+}
+.searchAside .search-area{
+    width: 376px;
+    height: 40px;
+    background-color: #1A2537;
+    border: #F2F2F2 1px solid;
+    border-radius: 0 20px 20px 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.searchAside button{
+    outline: none;
+    background-color: #1A2537;
+    border: none;
+    margin: 0 16px 0 16px;
+    cursor: pointer;
+}
+.searchAside input{
+    outline: none;
+    background-color: #1A2537;
+    border: none;
+    height: 38px;
+    width: 295px;
+    color: #F2F2F2;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.search-recommandation{
+    overflow-y: auto;
+    border-radius: 0 0 20px 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    min-height: 120px;
+}
+
+.profil-search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 358px;
+    height: 70px;
+    border-radius: 35px 35px 0 35px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 12px 10px 0;
+}
+.profil-search:hover{
+    background-color: rgba(242,242,242,0.2);
+}
+.profil-search .left{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 14px;
+    position: relative;
+}
+.profil-search img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: #F2F2F2 1px solid;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+.profil-search .right p:last-of-type{
+    width: 270px;
+    flex-wrap: nowrap;
+    word-break: normal;
+    display: flex;
+}
+.profil-search .right p:first-of-type{
+    font-size: 18px;
+    font-family: Gotham;
+}
+.profil-search .right p:nth-of-type(2){
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 2px 0;
+    font-weight: 300;
+}
+.profil-search .right p:nth-of-type(3){
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+
+.loader{
+    z-index: 60;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#1A2537, #1A2547);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoloader{
+    transform: translateY(350px) rotate(180deg);
+    animation: gravity 2.6s ease infinite;
+}
+@keyframes gravity {
+    0% {
+        transform: translateY(-350px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(350px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-350px) rotate(0deg);
+    }
+}
+.vert{
+    opacity: 0;
+    animation: vert 1.3s ease infinite;
+}
+.rose{
+    opacity: 0;
+    animation: vert 1.3s ease infinite;
+}
+@keyframes vert {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.disparition{
+    opacity: 0;
+    z-index: -50;
+    transition: opacity 1s ease-out;
+}

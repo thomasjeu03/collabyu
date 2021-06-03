@@ -1,14 +1,13 @@
 <?php
+if(isset($_SESSION)){
+    header('location: home.php');
+}
 session_start();
 
-$bdd = new PDO (
-    'mysql:host=127.0.0.1;dbname=collabyu;charset=utf8',
-    'root',
-    'root');
+include_once "configPDO.php";
 
 if (isset($_POST['submitconnect'])){
-    $getid = intval($_GET['user_id_USERS']);
-
+    $getid = intval($_GET['user_uniqueid_USERS']);
     $mailconnect = htmlspecialchars($_POST['mailconnect']);
     $mdpconnect = sha1($_POST['passwordconnect']);
 
@@ -18,16 +17,13 @@ if (isset($_POST['submitconnect'])){
         $userexist = $requser->rowCount();
         if($userexist == 1){
             $userinfo = $requser->fetch();
-            $_SESSION['user_id_USERS'] = $userinfo['user_id_USERS'];
-            $_SESSION['user_username_USERS'] = $userinfo['user_username_USERS'];
-            $_SESSION['user_mail_USERS'] = $userinfo['user_mail_USERS'];
-            $lastlogin = 'SELECT user_lastlogin_USERS FROM users WHERE user_id_USERS= ?';
-            if ($lastlogin = false){
-                header("Location: custom.php?user_id_USERS=".$_SESSION['user_id_USERS']);
-                $lastlogin = true;
+            $_SESSION = $userinfo;
+            if (empty($_SESSION['user_lastlogin_USERS'])){
+                header("Location: custom.php?user_uniqueid_USERS=".$_SESSION['user_uniqueid_USERS']);
             }else{
-                header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
+                header("Location: home.php?user_uniqueid_USERS=".$_SESSION['user_uniqueid_USERS']);
             }
+
         }else{
             $erreur = "Adresse mail ou mot de passe incorrect";
         }
@@ -40,7 +36,7 @@ if (isset($_POST['submitconnect'])){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>CollabyU | Connextion</title>
+    <title>CollabyU | Connexion</title>
 
     <meta name="description" content="Connectez-vous à CollabyU et démarrez de toutes nouvelles collaborations musicales en ligne.">
 

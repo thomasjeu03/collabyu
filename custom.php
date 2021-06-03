@@ -1,42 +1,27 @@
 <?php
-session_start();
+    session_start();
+error_reporting(E_ALL ^ E_WARNING);
+    include_once "configPDO.php";
 
-$bdd = new PDO (
-    'mysql:host=127.0.0.1;dbname=collabyu;charset=utf8',
-    'root',
-    'root');
-
-if (isset($_POST['submit2'])) {
-    $getid = intval($_GET['user_id_USERS']);
-    $instrument = htmlspecialchars($_POST['instrument']);
-    $yearofpractise = htmlspecialchars($_POST['yearOfPractise']);
-    $profil = htmlspecialchars($_POST['profil']);
-    $bio = htmlspecialchars($_POST['bio']);
-
-    if(!empty($_POST['instrument']) AND !empty($_POST['yearOfPractise']) AND !empty($_POST['profil']) AND !empty($_POST['bio'])){
-        $intousers = $bdd->prepare("UPDATE users SET user_instrument_USERS='$instrument',user_yearOfPractice_USERS='$yearofpractise',user_profil_USERS='$profil',user_biographie_USERS='$bio' WHERE user_id_USERS = '$getid'");
-        $intousers->execute(array($instrument, $yearofpractise, $profil, $bio));
-        $userexist = $intousers->rowCount();
-        if($userexist == 1){
-            $userinfo = $intousers->fetch();
-            $_SESSION['user_id_USERS'] = $userinfo['user_id_USERS'];
-            $_SESSION['user_username_USERS'] = $userinfo['user_username_USERS'];
-            $_SESSION['user_mail_USERS'] = $userinfo['user_mail_USERS'];
-            header("Location: home.php?user_id_USERS=".$_SESSION['user_id_USERS']);
-        }else{
-            $erreur = "Adresse mail ou mot de passe incorrect";
-        }
-    }else{
-        $erreur = "";
-    }
-}
-
-if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
+if(isset($_SESSION['user_uniqueid_USERS']))
 {
-    $getid = intval($_SESSION['user_id_USERS']);
-    $requser = $bdd->prepare('SELECT * FROM users WHERE user_id_USERS = ?');
-    $requser->execute(array($getid));
-    $userinfo = $requser->fetch();
+    $reqUser = $bdd->prepare('SELECT * FROM users WHERE user_uniqueid_USERS = ?');
+    $reqUser->execute(array($_SESSION['user_uniqueid_USERS']));
+    $userinfo = $reqUser->fetch();
+
+    if (isset($_POST['submit2'])) {
+        $getid = intval($_SESSION['user_uniqueid_USERS']);
+        $instrument = htmlspecialchars($_POST['instrument']);
+        $yearofpractise = htmlspecialchars($_POST['yearOfPractise']);
+        $profil = htmlspecialchars($_POST['profil']);
+        $bio = htmlspecialchars($_POST['bio']);
+                    $time = time();
+                    $lastlogin = $time;
+                        $ran_id = rand(time(), 100000000);
+                        $reqUser = $bdd->prepare("UPDATE users SET user_instrument_USERS='$instrument',user_yearOfPractice_USERS='$yearofpractise',user_profil_USERS='$profil',user_biographie_USERS='$bio',user_lastlogin_USERS='$lastlogin' WHERE user_uniqueid_USERS = '$getid'");
+                        $reqUser->execute(array($instrument, $yearofpractise, $profil, $bio, $lastlogin));
+                        header("Location: home.php?user_uniqueid_USERS=".$_SESSION['user_uniqueid_USERS']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -475,7 +460,7 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
                         </g>
                     </svg>
                     <select name="Genre musicaux">
-                        <option value="0">Genre musicaux</option>
+                        <option value="">Genre musicaux</option>
                         <option value="1">Beatbox</option>
                         <option value="2">Blues</option>
                         <option value="3">Chœur</option>
@@ -494,7 +479,7 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
                         <option value="16">Pop</option>
                         <option value="17">Rap FR</option>
                         <option value="18">Rap US</option>
-                        <option value="19">Raggae</option>
+                        <option value="19">Reggae</option>
                         <option value="20">Rhythm and blues</option>
                         <option value="21">Rock'n'roll</option>
                         <option value="22">Variété française</option>
@@ -533,7 +518,7 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
                             <circle id="Ellipse_2591" data-name="Ellipse 2591" cx="1" cy="1" r="1" transform="translate(8.211 8.211)" fill="#f2f2f2"/>
                         </g>
                     </svg>
-                    <input type="number" name="yearOfPractise" min="1" max="100" placeholder="Année.s de pratique" required>
+                    <input type="number" name="yearOfPractise" min="1" max="100" placeholder="Année.s de pratique">
                 </div>
                 <div class="field input">
                     <svg id="badge" xmlns="http://www.w3.org/2000/svg" width="21.565" height="29.56" viewBox="0 0 21.565 29.56">
@@ -541,7 +526,7 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
                         <path id="Tracé_145" data-name="Tracé 145" d="M75,68.156a6.917,6.917,0,0,0-.876.055.438.438,0,0,0,.111.87A6.039,6.039,0,0,1,75,69.032a5.966,5.966,0,1,1-2.443.521.438.438,0,0,0-.359-.8,6.851,6.851,0,1,0,2.8-.6Zm0,0" transform="translate(-64.221 -64.221)" fill="#f2f2f2"/>
                         <path id="Tracé_146" data-name="Tracé 146" d="M104.963,134.6a1.342,1.342,0,0,0,0,1.9l1.914,1.915a1.341,1.341,0,0,0,1.9,0l4.179-4.179a1.34,1.34,0,0,0-1.9-1.9l-3.231,3.232-.967-.967a1.342,1.342,0,0,0-1.9,0Zm2.862,2.025a.438.438,0,0,0,.31-.129l3.541-3.541a.464.464,0,1,1,.656.656l-4.179,4.179a.464.464,0,0,1-.656,0l-1.915-1.914a.464.464,0,0,1,.656-.656l1.277,1.277A.438.438,0,0,0,107.825,136.628Zm0,0" transform="translate(-98.534 -124.329)" fill="#f2f2f2"/>
                     </svg>
-                    <input type="text" name="profil" placeholder="Profil">
+                    <input type="text" name="profil" placeholder="Profil / Métier">
                 </div>
                 <div class="field input inputbio">
                     <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="26.431" height="26.298" viewBox="0 0 26.431 26.298">
@@ -550,6 +535,12 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
                     </svg>
                     <textarea name="bio" id="bio" placeholder="Biographie"></textarea>
                 </div>
+                <?php
+                if(!empty($erreurfile)){
+                    ?>
+                    <div class="error-text"><?=$erreurfile?></div>
+                <?php }
+                ?>
                 <div class="field button">
                     <input type="submit" class="ctaform" name="submit2" value="C'est parti">
                 </div>
@@ -577,25 +568,9 @@ if(isset($_GET['user_id_USERS']) AND $_GET['user_id_USERS'] > 0)
         }
     }
 </script>
-<script>
-    /*
-    const firstform = document.querySelector('.card');
-    const secondeform = document.querySelector('.carddeux');
-    const formcta = document.querySelector('.card .ctaform');
-    const back = document.querySelector('.back');
-
-    formcta.addEventListener('click', apparition);
-    back.addEventListener('click', comeback);
-
-    function apparition() {
-        firstform.classList.add("formspon");
-        secondeform.classList.remove("formspon");
-    }
-    function comeback() {
-        firstform.classList.remove("formspon");
-        secondeform.classList.add("formspon");
-    }*/
-</script>
 </body>
 </html>
-<?php } ?>
+<?php }
+else{
+    header("Location: login.php");
+}?>

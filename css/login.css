@@ -238,4 +238,60 @@ a>p{
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
     }
+    .grille2points{
+        display: none;
+    }
+}
+@media only screen and (max-width: 540px){
+    h1{
+        font-size: 35px;
+    }
+    .card{
+        width: calc(100% - 52px);
+        padding: 30px;
+        height: auto;
+    }
+    .grille2points{
+        display: none;
+    }
+    form{
+        width: 100%;
+        margin-top: 50px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button>input{
+        margin-top: 40px;
+        height: 55px;
+        font-size: 22px;
+    }
+    .input input{
+        width: calc(100% - 30px);
+    }
+    a>p{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        bottom: 20px;
+        z-index: 2;
+    }
+}
+@media only screen and (max-width: 350px){
+    h1{
+        font-size: 26px;
+    }
+    a>p{
+        font-family: Roboto;
+        font-size: 13px;
+        line-height: 17px;
+        text-align: center;
+        font-weight: 400;
+    }
 }

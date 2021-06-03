@@ -1,0 +1,38 @@
+.logocorner{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-520px);
+    margin-top: 25px;
+}
+main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+    background-color: #1A2537;
+}
+.logodefin{
+    position: relative;
+    left: 50%;
+    transform: translateX(-40px);
+    margin-top: 30px;
+}
+.fixed{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-1000px);
+    top: 190px;
+    z-index: 1;
+    opacity: 0.1;
+    animation: grilledepoint 4s ease-in-out infinite alternate ;
+}
+@keyframes grilledepoint {
+    50% {
+        opacity: 1;
+    }
+}
+a:hover{
+    color: #009380;
+}
